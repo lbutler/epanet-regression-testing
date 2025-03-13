@@ -5,36 +5,58 @@ echo "INFO: Starting EPANET regression test inside Docker."
 echo "INFO: REF_TAG=${REF_TAG}, SUT_TAG=${SUT_TAG}"
 
 #----------------------------------
-# 1) Clone EPANET Repo Twice
+# 1) Clone EPANET Once (Full Clone)
+#    so we can checkout branches or commits.
 #----------------------------------
-mkdir -p /epanet/ref /epanet/sut
+REPO_URL="https://github.com/OpenWaterAnalytics/EPANET.git"
+SRC_DIR="/epanet/src"
 
-# --- Reference clone (v2.2 by default)
-cd /epanet/ref
-if [ ! -d .git ]; then
-  echo "INFO: Cloning EPANET (ref) from GitHub at tag ${REF_TAG}..."
-  git clone --depth=1 --branch "${REF_TAG}" https://github.com/OpenWaterAnalytics/EPANET.git .
+if [ ! -d "$SRC_DIR/.git" ]; then
+  echo "INFO: Cloning full EPANET repository..."
+  git clone "$REPO_URL" "$SRC_DIR"
 else
-  echo "INFO: Updating existing EPANET (ref) repo..."
+  echo "INFO: Repository already exists. Fetching latest changes..."
+  cd "$SRC_DIR"
+  # You can choose whether to do a 'git pull' or 'git fetch --all' etc.
   git fetch --all
-  git checkout "${REF_TAG}"
-  git pull
-fi
-
-# --- SUT clone (master or user-specified commit)
-cd /epanet/sut
-if [ ! -d .git ]; then
-  echo "INFO: Cloning EPANET (SUT) from GitHub at tag ${SUT_TAG}..."
-  git clone --depth=1 --branch "${SUT_TAG}" https://github.com/OpenWaterAnalytics/EPANET.git .
-else
-  echo "INFO: Updating existing EPANET (SUT) repo..."
-  git fetch --all
-  git checkout "${SUT_TAG}"
-  git pull
 fi
 
 #----------------------------------
-# 2) Build Each Version
+# 2) Create Working Copies for REF and SUT
+#----------------------------------
+echo "INFO: Creating separate copies for reference and SUT builds..."
+rm -rf /epanet/ref /epanet/sut
+cp -r "$SRC_DIR" /epanet/ref
+cp -r "$SRC_DIR" /epanet/sut
+
+#----------------------------------
+# 3) Checkout the Correct Version for REF & SUT
+#    (branch, tag, or commit)
+#----------------------------------
+checkout_version() {
+  local work_dir="$1"
+  local version="$2"
+  cd "$work_dir"
+
+  # If "version" is a commit hash (7+ hex chars), just checkout directly;
+  # otherwise assume it's a branch or tag and fetch + checkout.
+  if [[ "$version" =~ ^[a-fA-F0-9]{7,}$ ]]; then
+    echo "INFO: Checking out commit $version in $work_dir..."
+    # If commit not in local clone, fetch it
+    git fetch origin "$version"
+    git checkout "$version"
+  else
+    echo "INFO: Checking out branch/tag $version in $work_dir..."
+    git fetch origin "$version"
+    git checkout "$version"
+  fi
+}
+
+checkout_version "/epanet/ref" "$REF_TAG"
+checkout_version "/epanet/sut" "$SUT_TAG"
+
+#----------------------------------
+# 4) Build Each Version
 #----------------------------------
 build_epanet() {
   local build_dir="$1/build"
@@ -51,6 +73,7 @@ build_epanet() {
   echo "INFO: Running unit tests for $label..."
   cd tests
   ctest -C Release --output-on-failure
+  # Return to source root
   cd "$src_dir"
 }
 
@@ -58,7 +81,8 @@ build_epanet "/epanet/ref" "Reference Build"
 build_epanet "/epanet/sut" "SUT Build"
 
 #----------------------------------
-# 3) Download standard test suite (if DO_STANDARD_TEST=true)
+# 5) (Re-)Download standard test suite (if DO_STANDARD_TEST=true)
+#    Restore the logic from original script
 #----------------------------------
 if [ "$DO_STANDARD_TEST" = "true" ]; then
   echo "INFO: Downloading official EPANET example networks for standard tests..."
@@ -66,6 +90,8 @@ if [ "$DO_STANDARD_TEST" = "true" ]; then
   cd "$TEST_HOME"
   rm -rf ./*
 
+  # EXAMPLES_REPO should be set to: https://github.com/OpenWaterAnalytics/epanet-example-networks
+  # Or some other environment variable if you prefer
   LATEST_URL="${EXAMPLES_REPO}/releases/latest"
   LATEST_TAG=$(curl -sI "$LATEST_URL" | grep -Po 'tag\/\K(v\S+)' || true)
   if [ -z "$LATEST_TAG" ]; then
@@ -90,7 +116,7 @@ if [ "$DO_STANDARD_TEST" = "true" ]; then
 fi
 
 #----------------------------------
-# 4) nrtest "app config" JSON for each version
+# 6) nrtest "app config" JSON for each version
 #----------------------------------
 mkdir -p "$TEST_HOME/apps"
 
@@ -117,20 +143,20 @@ cat <<EOF > "$sut_app"
 EOF
 
 #----------------------------------
-# 5) Run nrtest execute for each (if DO_STANDARD_TEST=true)
+# 7) Run nrtest on standard tests (if DO_STANDARD_TEST=true)
 #----------------------------------
 if [ "$DO_STANDARD_TEST" = "true" ]; then
   echo "INFO: Running nrtest on standard tests..."
   cd "$TEST_HOME"
 
-  TEST_FILES=$(ls -1 ./tests/*/*.json)
+  TEST_FILES=$(ls -1 ./tests/*/*.json 2>/dev/null || true)
   if [ -z "$TEST_FILES" ]; then
     echo "WARNING: No test JSON files found! Standard tests skipped."
   else
     # REF results
-    nrtest execute "$ref_app"  $TEST_FILES -o ./benchmark/epanet-ref
+    nrtest execute "$ref_app" $TEST_FILES -o ./benchmark/epanet-ref
     # SUT results
-    nrtest execute "$sut_app"  $TEST_FILES -o ./benchmark/epanet-sut
+    nrtest execute "$sut_app" $TEST_FILES -o ./benchmark/epanet-sut
 
     # Compare
     echo "INFO: Comparing epanet-sut to epanet-ref..."
@@ -141,16 +167,15 @@ else
 fi
 
 #----------------------------------
-# 6) Optional custom tests (if DO_CUSTOM_TEST=true)
+# 8) Optional custom tests (if DO_CUSTOM_TEST=true)
 #----------------------------------
 if [ "$DO_CUSTOM_TEST" = "true" ]; then
   if [ -d "/custom_tests" ]; then
-    echo "INFO: Found /custom_tests. Executing nrtest..."
+    echo "INFO: Running nrtest on custom test cases..."
     mkdir -p "$TEST_HOME/benchmark"
     nrtest execute "$sut_app" /custom_tests -o "$TEST_HOME/benchmark/custom_sut" || true
 
-    # Optionally compare custom_sut to custom_ref if you want
-    # ...
+    # Compare custom_sut to custom_ref if you want, etc...
   else
     echo "INFO: DO_CUSTOM_TEST=true but no /custom_tests directory found."
   fi
