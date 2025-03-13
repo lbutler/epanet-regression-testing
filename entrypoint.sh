@@ -17,7 +17,6 @@ if [ ! -d "$SRC_DIR/.git" ]; then
 else
   echo "INFO: Repository already exists. Fetching latest changes..."
   cd "$SRC_DIR"
-  # You can choose whether to do a 'git pull' or 'git fetch --all' etc.
   git fetch --all
 fi
 
@@ -81,8 +80,7 @@ build_epanet "/epanet/ref" "Reference Build"
 build_epanet "/epanet/sut" "SUT Build"
 
 #----------------------------------
-# 5) (Re-)Download standard test suite (if DO_STANDARD_TEST=true)
-#    Restore the logic from original script
+# 5) Download Standard Test Suite (if DO_STANDARD_TEST=true)
 #----------------------------------
 if [ "$DO_STANDARD_TEST" = "true" ]; then
   echo "INFO: Downloading official EPANET example networks for standard tests..."
@@ -104,15 +102,17 @@ if [ "$DO_STANDARD_TEST" = "true" ]; then
   curl -fsSL -o examples.tar.gz "$ARCHIVE_URL"
   tar xzf examples.tar.gz && rm examples.tar.gz
 
-  BASENAME="epanet-example-networks-${LATEST_TAG#v}"
-  if [ ! -d "$BASENAME" ]; then
-    echo "ERROR: Could not find extracted folder $BASENAME"
+  EXTRACTED_DIR="epanet-example-networks-${LATEST_TAG#v}/epanet-tests"
+
+  if [ ! -d "$EXTRACTED_DIR" ]; then
+    echo "ERROR: Could not find extracted folder $EXTRACTED_DIR"
     ls -l
     exit 1
   fi
 
-  # Link epanet-tests to a "tests" folder
-  ln -s "${BASENAME}/epanet-tests" tests
+  # Remove symlink and use the real directory
+  rm -rf "$TEST_HOME/tests"
+  mv "$EXTRACTED_DIR" "$TEST_HOME/tests"
 fi
 
 #----------------------------------
@@ -120,8 +120,7 @@ fi
 #----------------------------------
 mkdir -p "$TEST_HOME/apps"
 
-ref_app="$TEST_HOME/apps/epanet-ref.json"
-cat <<EOF > "$ref_app"
+cat <<EOF > "$TEST_HOME/apps/epanet-ref.json"
 {
   "name" : "epanet-ref",
   "version" : "unknown",
@@ -131,8 +130,7 @@ cat <<EOF > "$ref_app"
 }
 EOF
 
-sut_app="$TEST_HOME/apps/epanet-sut.json"
-cat <<EOF > "$sut_app"
+cat <<EOF > "$TEST_HOME/apps/epanet-sut.json"
 {
   "name" : "epanet-sut",
   "version" : "unknown",
@@ -143,39 +141,35 @@ cat <<EOF > "$sut_app"
 EOF
 
 #----------------------------------
-# 7) Run nrtest on standard tests (if DO_STANDARD_TEST=true)
+# 7) Run nrtest on Standard Tests (if DO_STANDARD_TEST=true)
 #----------------------------------
 if [ "$DO_STANDARD_TEST" = "true" ]; then
   echo "INFO: Running nrtest on standard tests..."
   cd "$TEST_HOME"
 
-  TEST_FILES=$(ls -1 ./tests/*/*.json 2>/dev/null || true)
+  TEST_FILES=$(find "$TEST_HOME/tests" -type f -name '*.json' 2>/dev/null)
+
   if [ -z "$TEST_FILES" ]; then
     echo "WARNING: No test JSON files found! Standard tests skipped."
   else
-    # REF results
-    nrtest execute "$ref_app" $TEST_FILES -o ./benchmark/epanet-ref
-    # SUT results
-    nrtest execute "$sut_app" $TEST_FILES -o ./benchmark/epanet-sut
+    nrtest execute "$TEST_HOME/apps/epanet-ref.json" $TEST_FILES -o "$TEST_HOME/benchmark/epanet-ref"
+    nrtest execute "$TEST_HOME/apps/epanet-sut.json" $TEST_FILES -o "$TEST_HOME/benchmark/epanet-sut"
 
-    # Compare
     echo "INFO: Comparing epanet-sut to epanet-ref..."
-    nrtest compare ./benchmark/epanet-sut ./benchmark/epanet-ref --rtol 0.01 --atol 1e-6
+    nrtest compare "$TEST_HOME/benchmark/epanet-sut" "$TEST_HOME/benchmark/epanet-ref" --rtol 0.01 --atol 1e-6
   fi
 else
   echo "INFO: Skipping standard tests per DO_STANDARD_TEST=false."
 fi
 
 #----------------------------------
-# 8) Optional custom tests (if DO_CUSTOM_TEST=true)
+# 8) Run Custom Tests (if DO_CUSTOM_TEST=true)
 #----------------------------------
 if [ "$DO_CUSTOM_TEST" = "true" ]; then
   if [ -d "/custom_tests" ]; then
     echo "INFO: Running nrtest on custom test cases..."
     mkdir -p "$TEST_HOME/benchmark"
-    nrtest execute "$sut_app" /custom_tests -o "$TEST_HOME/benchmark/custom_sut" || true
-
-    # Compare custom_sut to custom_ref if you want, etc...
+    nrtest execute "$TEST_HOME/apps/epanet-sut.json" /custom_tests -o "$TEST_HOME/benchmark/custom_sut" || true
   else
     echo "INFO: DO_CUSTOM_TEST=true but no /custom_tests directory found."
   fi
