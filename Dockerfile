@@ -1,4 +1,4 @@
-# Use Ubuntu as the base image
+# Use Ubuntu as the base
 FROM ubuntu:22.04
 
 # Install system dependencies
@@ -13,36 +13,32 @@ RUN apt-get update && apt-get install -y \
   tar \
   unzip \
   jq \
-  libboost-all-dev 
+  libboost-all-dev
 
-# Set up a working directory
+# Working directory
 WORKDIR /epanet
 
-# Copy the entire nrtest-epanet folder into the container
+# Copy "nrtest-epanet" folder so we can install the plugin
 COPY nrtest-epanet /nrtest-epanet/
 RUN pip3 install /nrtest-epanet/
 
-# Copy Python requirements
+# Copy Python requirements for nrtest, epanet.output, etc.
 COPY requirements-epanet.txt /tmp/requirements-epanet.txt
-
-# Install Python dependencies (nrtest, nrtest-epanet, etc.)
 RUN pip3 install -r /tmp/requirements-epanet.txt
 
-# Set environment variables for your build
-# Add REF_BUILD_ID=2.2 if you want to run the reference comparison by default
-ENV PROJECT=epanet \
-    BUILD_HOME=/epanet/build \
-    TEST_HOME=/epanet/nrtests \
-    EPANET_REPO="https://github.com/OpenWaterAnalytics/EPANET.git" \
+# Environment variables for controlling build & testing
+ENV REF_TAG="v2.2" \
+    SUT_TAG="master" \
+    DO_STANDARD_TEST="true" \
+    DO_CUSTOM_TEST="false" \
     EXAMPLES_REPO="https://github.com/OpenWaterAnalytics/epanet-example-networks" \
-    SUT_BUILD_ID=local \
-    REF_BUILD_ID=unknown \
-    PLATFORM=linux
+    BUILD_HOME="/epanet/build" \
+    TEST_HOME="/epanet/nrtests" \
+    PLATFORM="linux"
 
-# Copy our entrypoint script
+# Copy the new entrypoint script
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-WORKDIR /epanet
-
+# Default entrypoint
 ENTRYPOINT ["/entrypoint.sh"]

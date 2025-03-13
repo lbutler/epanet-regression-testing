@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This project provides a **Dockerized regression testing environment for EPANET**, ensuring that updates to the software do not introduce unintended changes. By containerizing the testing process, users can run **official regression tests** and **custom/private test suites** without needing to manually install dependencies or configure their system.
+This project provides a **Dockerized regression testing environment for EPANET**, ensuring that updates to the software do not introduce unintended changes. By containerizing the testing process, users can run **regression tests** and **custom/private test suites** without needing to manually install dependencies or configure their system.
 
 ## Quick Start
 
@@ -14,13 +14,19 @@ To set up the test environment, build the Docker image:
 docker build -t epanet-regtest .
 ```
 
-### **2️⃣ Run the Official Test Suite**
+### **2️⃣ Run Regression Tests**
 
-To execute the official EPANET regression tests inside the container:
+To execute the EPANET regression tests inside the container:
 
 ```sh
 docker run --rm epanet-regtest
 ```
+
+By default, this:
+
+- **Builds EPANET v2.2 (reference)** and the latest version (SUT).
+- **Runs both builds through the regression test suite.**
+- **Compares outputs** to detect differences.
 
 ### **3️⃣ Run a Private Test Library**
 
@@ -39,20 +45,22 @@ docker run --rm -v /path/to/private/tests:/custom_tests epanet-regtest
 
 This section details how the system works and the role of each component.
 
-### **🔹 Step 1: Build EPANET with Unit Tests**
+### **🔹 Step 1: Build Two Versions of EPANET**
 
 - **Files involved:** `Dockerfile`, `entrypoint.sh`
 - **What happens:**
-  1. **Clone EPANET**: The Docker container checks if EPANET is already present; if not, it clones the latest version.
-  2. **Compile EPANET with unit tests enabled** (`-DBUILD_TESTS=ON`).
-  3. **Run EPANET unit tests** using `ctest` to verify functionality.
+  1. **Clone EPANET twice**:
+     - `REF_TAG` (default `v2.2`) → `/epanet/ref`
+     - `SUT_TAG` (default `master`) → `/epanet/sut`
+  2. **Compile both versions** with unit tests enabled (`-DBUILD_TESTS=ON`).
+  3. **Run unit tests** using `ctest` to verify functionality.
   4. **If unit tests fail, execution stops**, preventing invalid builds from running regression tests.
 
-### **🔹 Step 2: Download Official Test Suite**
+### **🔹 Step 2: Download Regression Test Suite**
 
 - **Files involved:** `entrypoint.sh`
 - **What happens:**
-  1. The script determines the latest release tag of the official `epanet-example-networks` repository.
+  1. The script determines the latest release tag of the `epanet-example-networks` repository.
   2. The latest test files are downloaded and extracted.
   3. A symbolic link is created (`tests -> epanet-example-networks-<tag>/epanet-tests`) so the test suite is always available at a consistent path.
 
@@ -60,20 +68,20 @@ This section details how the system works and the role of each component.
 
 - **Files involved:** `entrypoint.sh`
 - **What happens:**
-  1. A JSON configuration file (`apps/epanet-local.json`) is generated, specifying:
-     - The executable path
+  1. Two **nrtest JSON configuration files** (`apps/epanet-ref.json` and `apps/epanet-sut.json`) are generated, specifying:
+     - The executable path for each build
      - Platform details
-     - Any necessary setup scripts
-  2. This configuration file tells `nrtest` how to execute EPANET.
+  2. This tells `nrtest` how to execute both versions of EPANET.
 
 ### **🔹 Step 4: Run Regression Tests**
 
 - **Files involved:** `entrypoint.sh`
 - **What happens:**
-  1. All `.json` test definitions in `tests/*/*.json` are detected using `ls -1`.
-  2. `nrtest execute` runs EPANET against these test cases.
-  3. If a reference benchmark exists, `nrtest compare` checks if results match expected outputs.
-  4. Results are stored in the `benchmark/` directory inside the container.
+  1. All `.json` test definitions in `tests/*/*.json` are detected.
+  2. `nrtest execute` runs EPANET on the test cases:
+     - **Reference build output** → `benchmark/epanet-ref`
+     - **SUT build output** → `benchmark/epanet-sut`
+  3. `nrtest compare` checks for differences between the two versions.
 
 ### **🔹 Step 5: Run Private Tests (Optional)**
 
@@ -98,12 +106,12 @@ Defines the container environment:
 
 Controls the full test lifecycle:
 
-- Builds EPANET with unit tests enabled.
-- Runs **EPANET unit tests** before proceeding to regression testing.
+- Builds **two** EPANET versions (`REF_TAG` and `SUT_TAG`).
+- Runs **unit tests** before proceeding to regression testing.
 - Downloads test cases.
-- Runs `nrtest` for official and private test suites.
+- Runs `nrtest` for standard and private test suites.
 
-### **📌 Official Test Suite (`epanet-example-networks`)**
+### **📌 Regression Test Suite (`epanet-example-networks`)**
 
 Contains:
 
@@ -120,12 +128,34 @@ Contains:
 - You can manually edit test `.json` files in the `tests/` directory to add or modify test cases.
 - If using a private test suite, simply mount your folder with `-v`.
 
-### **Using a Different EPANET Version**
+### **Testing Different EPANET Versions**
 
-- Modify `EPANET_REPO` in `entrypoint.sh` to test a different version.
+- Modify `REF_TAG` and `SUT_TAG` to compare **any two versions** of EPANET.
+- Example: Compare `v2.2` to a feature branch:
+
+```sh
+docker run --rm -e REF_TAG="v2.2" -e SUT_TAG="feature-branch" epanet-regtest
+```
+
+---
+
+### **Summary of Key Commands**
+
+| Action                                    | Command                                                                                                         |
+| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Build the image                           | `docker build -t epanet-docker .`                                                                               |
+| Run with default comparison (SUT vs v2.2) | `docker run --rm epanet-docker`                                                                                 |
+| Run with specific SUT & REF tags          | `docker run --rm -e REF_TAG="v2.2" -e SUT_TAG="mybranch" epanet-docker`                                         |
+| Skip standard tests (only run custom)     | `docker run --rm -e DO_STANDARD_TEST=false -e DO_CUSTOM_TEST=true -v /path/on/host:/custom_tests epanet-docker` |
+| Run both standard & custom tests          | `docker run --rm -e DO_STANDARD_TEST=true -e DO_CUSTOM_TEST=true -v /path/on/host:/custom_tests epanet-docker`  |
+| Open interactive shell                    | `docker run -it --entrypoint /bin/bash epanet-docker`                                                           |
+| Run entrypoint manually inside shell      | `/entrypoint.sh`                                                                                                |
+| Force rebuild                             | `docker build --no-cache -t epanet-docker .`                                                                    |
 
 ---
 
 ## **Final Notes**
 
-With this setup, anyone can **quickly verify EPANET's behavior** across multiple test cases, without worrying about installation or system dependencies. Simply **build the image, run tests, and analyze results!** 🚀
+This setup ensures that **EPANET regression testing is automated, reliable, and reproducible**. By comparing against a **freshly built v2.2 reference**, any changes in the software can be detected immediately.
+
+Simply **build the image, run the tests, and analyze the results!** 🚀
