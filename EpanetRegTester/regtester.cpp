@@ -15,14 +15,29 @@ file being tested resides. REGTESTER will run each of the test input files
 through this DLL and compare the results obtained against those in the reference
 output files to see if they pass the "closeness" test.
 *******************************************************************************/
-#include <windows.h>
-#include <filesystem>
 #include <iostream>
 #include <fstream>
 #include <sstream>
 #include <vector>
 #include <string>
 #include <cmath>
+#include <filesystem>
+#include <cstring>
+
+#ifdef _WIN32
+#include <windows.h>
+#define DLL_HANDLE HMODULE
+#define LOAD_LIBRARY(path) LoadLibraryA(path.c_str())
+#define GET_PROC_ADDRESS(handle, name) GetProcAddress(handle, name)
+#define FREE_LIBRARY(handle) FreeLibrary(handle)
+#else
+#include <dlfcn.h>
+#define DLL_HANDLE void*
+#define LOAD_LIBRARY(path) dlopen(path.c_str(), RTLD_LAZY)
+#define GET_PROC_ADDRESS(handle, name) dlsym(handle, name)
+#define FREE_LIBRARY(handle) dlclose(handle)
+#endif
+
 using namespace std;
 
 // Absolute & relative tolerances used for closeness testing
@@ -70,7 +85,7 @@ size_t indent;
 
 // Function prototypes
 int  readConfigFile(string configFile);
-int  loadEpanetDLL(HMODULE& hDLL);
+int  loadEpanetDLL(DLL_HANDLE& hDLL);
 void getOutFileProperties(ifstream& ftest);
 
 int  runAllTests();
@@ -87,7 +102,7 @@ void writeFailureInfo(TFailInfo failInfo);
 int main(int argc, char* argv[]) {
 
 	int status = 0;
-	HMODULE hDLL = NULL;
+	DLL_HANDLE hDLL = NULL;
 
 	// Check command line arguments
 	if (argc < 3) {
@@ -101,9 +116,9 @@ int main(int argc, char* argv[]) {
 
 	// Read configuration file & load EPANET DLL function
 	testPath = argv[1];
-	testPath = testPath + "\\";
+	testPath = testPath + "/";
 	dllPath = argv[2];
-	status = readConfigFile(testPath + "\\config.txt");
+	status = readConfigFile(testPath + "config.txt");
 	if (status == 0) status = loadEpanetDLL(hDLL);
 
 	// Run regression tests
@@ -112,7 +127,7 @@ int main(int argc, char* argv[]) {
 	}
 
 	// Free resources
-	if (hDLL) FreeLibrary(hDLL);
+	if (hDLL) FREE_LIBRARY(hDLL);
 	filesystem::remove(rptFile);
 	filesystem::remove(outFile);
 
@@ -160,24 +175,37 @@ int readConfigFile(string configFile) {
 	return status;
 }
 
-int loadEpanetDLL(HMODULE& hDLL) {
+int loadEpanetDLL(DLL_HANDLE& hDLL) {
+    // Determine the appropriate library name and extension based on OS
+    string filename;
+    #ifdef _WIN32
+        filename = dllPath + "/epanet2.dll";
+    #elif __APPLE__
+        filename = dllPath + "/libepanet2.dylib";
+    #else
+        filename = dllPath + "/libepanet2.so";
+    #endif
 
-	// Get a pointer to the EPANET toolkit library DLL
-	string filename = dllPath + "\\epanet2.dll";
-	hDLL = LoadLibraryA(filename.c_str());
-	if (hDLL == NULL) {
-		cout << endl << "Could not load EPANET DLL - test terminated." << endl;
-		return 1;
-	}
+    // Get a pointer to the EPANET toolkit library
+    hDLL = LOAD_LIBRARY(filename);
+    if (hDLL == NULL) {
+        cout << endl << "Could not load EPANET library - test terminated." << endl;
+        #ifndef _WIN32
+        cout << "Error: " << dlerror() << endl;
+        #endif
+        return 1;
+    }
 
-	// Get address of the ENepanet function in the library
-	runEpanet = (RunFunc)GetProcAddress(hDLL, "ENepanet");
-	if (runEpanet == NULL) {
-		cout << endl <<
-			"Could not load function from epanet2.dll - test terminated." << endl;
-		return 1;
-	}
-	return 0;
+    // Get address of the ENepanet function in the library
+    runEpanet = (RunFunc)GET_PROC_ADDRESS(hDLL, "ENepanet");
+    if (runEpanet == NULL) {
+        cout << endl << "Could not load function from EPANET library - test terminated." << endl;
+        #ifndef _WIN32
+        cout << "Error: " << dlerror() << endl;
+        #endif
+        return 1;
+    }
+    return 0;
 }
 
 int runAllTests() {

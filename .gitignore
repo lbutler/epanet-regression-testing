@@ -3,6 +3,9 @@
 # Build files
 *.exe
 *.dll
+*.dylib
+*.so
+EpanetRegTester/runregtester
 
 # OWA file binaries
 EpanetRegTester/OWAFile/*.out
