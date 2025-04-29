@@ -20,3 +20,42 @@ runregtests OWAFiles .
 
 (don't forget the period).
 
+Linux Compilation Instructions:
+----------------------------
+1. Ensure you have the required build tools installed:
+   sudo apt-get update
+   sudo apt-get install build-essential g++ make
+
+2. Compile the program:
+   g++ -std=c++17 regtester.cpp -o runregtester -ldl -L. -lepanet2 -Wl,-rpath,$PWD
+
+3. Run the tests:
+   ./runregtester OWAFiles .
+
+
+Note: Make sure you have the appropriate EPANET library (libepanet2.so) in the current directory.
+
+Mac Compilation Instructions:
+--------------------------
+1. Ensure you have the required build tools installed:
+   - Install Xcode Command Line Tools if not already installed:
+     xcode-select --install
+
+2. Compile the program:
+   g++ -std=c++17 regtester.cpp -o regtester -ldl
+
+3. Run the tests:
+   ./regtester ./OWAFile .
+
+Note: Make sure you have the appropriate EPANET library (libepanet2.dylib) in the current directory.
+
+Docker Usage:
+------------
+1. Build the Docker image:
+   docker build --platform linux/amd64 -t epanet-regtester .
+
+2. Run the tests:
+   docker run epanet-regtester
+
+Note: The Docker build requires the --platform flag when building on Apple Silicon (M1/M2) Macs.
+
