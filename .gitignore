@@ -1,1 +1,9 @@
 .DS_Store
+
+# Build files
+*.exe
+*.dll
+
+# OWA file binaries
+EpanetRegTester/OWAFile/*.out
+
