@@ -1,5 +1,5 @@
 #----------------------------------------------------------------------
-# Stage 1: Build EPANET Library from a specific version
+# Stage 1: Build EPANET Library and Executable from a specific version
 #----------------------------------------------------------------------
     FROM ubuntu:22.04 AS builder
 
@@ -30,14 +30,14 @@
         echo "INFO: Configuring EPANET build..." && \
         mkdir build && \
         cd build && \
-        # Configure CMake - Assuming default builds shared library needed
-        cmake .. && \
-        echo "INFO: Building EPANET library..." && \
-        # Build only the epanet2 target (library) for efficiency
-        make epanet2 -j$(nproc)
+        # Configure CMake - Build shared library and executable
+        cmake .. -DBUILD_SHARED_LIBS=ON && \
+        echo "INFO: Building EPANET library and executable..." && \
+        # Build everything (including runepanet executable and the library)
+        make -j$(nproc)
     
     #----------------------------------------------------------------------
-    # Stage 2: Build and Run the Regression Tester
+    # Stage 2: Final Image with Tester and EPANET Tools
     #----------------------------------------------------------------------
     FROM ubuntu:22.04
     
@@ -46,22 +46,40 @@
         build-essential \
         g++ \
         make \
+        bash \
+        # libc-bin provides ldconfig
+        libc-bin \
         && rm -rf /var/lib/apt/lists/*
     
-    # Set working directory
+    # Set working directory (primarily for the regtester)
     WORKDIR /app
     
-    # Copy the compiled EPANET library from the builder stage
-    COPY --from=builder /epanet_build/src/build/lib/libepanet2.so .
+    # --- CORRECTED LIBRARY COPY ---
+    # Copy the compiled EPANET library from the builder stage to a standard location
+    COPY --from=builder /epanet_build/src/build/lib/libepanet2.so /usr/local/lib/libepanet2.so
+    COPY --from=builder /epanet_build/src/build/lib/libepanet2.so ./libepanet2.so
+    # --- END CORRECTION ---
     
-    # Copy the C++ source code and test data files
+    # Copy the compiled runepanet executable from the builder stage to a standard location
+    COPY --from=builder /epanet_build/src/build/bin/runepanet /usr/local/bin/runepanet
+    
+    # Update the dynamic linker cache to recognize the new library (good practice)
+    RUN ldconfig
+    
+    # Copy the C++ source code and test data files (needed for testing mode)
     COPY regtester.cpp .
     COPY OWAFile/ ./OWAFile/
     
-    # Compile the C++ program, linking against the copied library
-    # -L. tells the linker to look in the current directory for libraries
-    # -Wl,-rpath,$PWD embeds the current path into the executable so it finds the .so at runtime
-    RUN g++ -std=c++17 regtester.cpp -o runregtester -ldl -L. -lepanet2 -Wl,-rpath,'$ORIGIN'
+    # Compile the C++ program, linking against the library
+    # The linker will now find libepanet2.so in the standard path (/usr/local/lib)
+    # so -L. is not strictly needed for libepanet2, but keep -Wl,-rpath,'$ORIGIN'
+    # if runregtester might load other libs from /app in the future.
+    # Alternatively, since libepanet2.so is now in a standard path, we might not
+    # need rpath for it anymore either, but let's keep it for now.
+    RUN g++ -std=c++17 regtester.cpp -o runregtester -ldl -lepanet2 -Wl,-rpath,'$ORIGIN'
     
-    # Set the entrypoint to run the regression tests
+    # Default entrypoint (for running regression tests)
     ENTRYPOINT ["./runregtester", "./OWAFile", "."]
+    
+    # Note: The reference generation will override this entrypoint
+    

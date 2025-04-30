@@ -5,6 +5,8 @@
 *.dll
 *.dylib
 *.so
+*.rpt
+
 EpanetRegTester/runregtester
 
 # OWA file binaries
