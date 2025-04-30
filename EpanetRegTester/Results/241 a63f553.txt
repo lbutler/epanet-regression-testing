@@ -1,0 +1,78 @@
+--------------------------------------------------
+ Running regression tests using image: epanet-regtester:a63f553
+--------------------------------------------------
+
+OWA-EPANET Regression Tests
+---------------------------
+2fcvs:             passed
+2PRVs:             passed
+2PRVs-a:           passed
+2PRVs-aquis:       passed
+2Tanks:            passed
+5fcvs:             passed
+6848-68nodes:      passed
+anytown-3:         passed
+cheung:            passed
+Elhay-ZeroFlow:    passed
+example1:          passed
+example1_2comp:    passed
+example1_LIFO:     passed
+example2:          FAILED
+                   There were 209 results failing.
+                   Largest difference occurred for Link 20 Friction Factor at time 12:00:00 hrs
+                   SUT value: 0.000000
+                   Ref value: 4.183796
+exnet-3:           passed
+exnet-3H:          passed
+exnet-3Q:          passed
+fcv:               passed
+fcv2:              passed
+fcv-noflow:        passed
+GES4-9:            passed
+gestar1:           passed
+gestar1mod:        passed
+gestar1modHW:      passed
+Gorev2:            passed
+hanoi-3:           passed
+JEP5-13:           passed
+mod_anytown-3:     passed
+mod_anytown-3a:    passed
+NET1:              passed
+NET1-3:            passed
+NET1cv:            passed
+NET1emit:          passed
+NET1negemit:       passed
+NET1np:            passed
+NET1para:          passed
+NET1-PBV:          passed
+noflow:            passed
+NW_Model:          FAILED
+                   There were 1108 results failing.
+                   Largest difference occurred for Link 5866 Friction Factor at time 0:00:00 hrs
+                   SUT value: 86068.171875
+                   Ref value: 64633.882812
+NW_Model1:         FAILED
+                   There were 834 results failing.
+                   Largest difference occurred for Link 5866 Friction Factor at time 0:00:00 hrs
+                   SUT value: 44638.906250
+                   Ref value: 67092.234375
+sampletown:        FAILED
+                   There were 7 results failing.
+                   Largest difference occurred for Link 5 Flow at time 7:00:00 hrs
+                   SUT value: 0.000236
+                   Ref value: -0.000002
+simplenet:         passed
+simpson_test:      passed
+simpson_test_2-12: passed
+st-net3:           passed
+st-net3-3:         passed
+test101:           passed
+test101-3:         passed
+todinitest:        passed
+wolf-3:            FAILED
+                   There were 1332 results failing.
+                   Largest difference occurred for Link 21945 Friction Factor at time 0:00:00 hrs
+                   SUT value: 1.159982
+                   Ref value: 0.000000
+
+50 files were tested with 45 passing and 5 failing.

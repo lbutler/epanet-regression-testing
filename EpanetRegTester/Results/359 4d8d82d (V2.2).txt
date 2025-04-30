@@ -1,0 +1,62 @@
+--------------------------------------------------
+ Running regression tests using image: epanet-regtester:4d8d82d
+--------------------------------------------------
+
+OWA-EPANET Regression Tests
+---------------------------
+2fcvs:             passed
+2PRVs:             passed
+2PRVs-a:           passed
+2PRVs-aquis:       passed
+2Tanks:            passed
+5fcvs:             passed
+6848-68nodes:      passed
+anytown-3:         passed
+cheung:            passed
+Elhay-ZeroFlow:    passed
+example1:          passed
+example1_2comp:    passed
+example1_LIFO:     passed
+example2:          passed
+exnet-3:           passed
+exnet-3H:          passed
+exnet-3Q:          passed
+fcv:               passed
+fcv2:              passed
+fcv-noflow:        passed
+GES4-9:            passed
+gestar1:           passed
+gestar1mod:        passed
+gestar1modHW:      passed
+Gorev2:            passed
+hanoi-3:           passed
+JEP5-13:           passed
+mod_anytown-3:     passed
+mod_anytown-3a:    passed
+NET1:              passed
+NET1-3:            passed
+NET1cv:            passed
+NET1emit:          passed
+NET1negemit:       passed
+NET1np:            passed
+NET1para:          passed
+NET1-PBV:          passed
+noflow:            passed
+NW_Model:          passed
+NW_Model1:         passed
+sampletown:        passed
+simplenet:         passed
+simpson_test:      passed
+simpson_test_2-12: passed
+st-net3:           passed
+st-net3-3:         passed
+test101:           passed
+test101-3:         passed
+todinitest:        passed
+wolf-3:            passed
+
+50 files were tested with 50 passing and 0 failing.
+
+--------------------------------------------------
+ Test run finished for version: 4d8d82d
+--------------------------------------------------

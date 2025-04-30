@@ -1,0 +1,1531 @@
+6a3d3d5,2025-04-24 09:40:56 -0400,Update project.c
+3c42061,2025-04-23 13:16:53 -0400,Update toolkit-topics.dox
+e206baa,2025-04-23 12:59:48 -0400,Add EN_VALVE_TYPE to link getter & setter
+fe77599,2025-04-22 11:22:07 -0400,Merge pull request #846 from OpenWaterAnalytics/dev-initsetting
+e71b7b4,2025-04-21 10:26:56 -0400,Save changed GPV curve to link's InitSetting
+ee9313a,2025-04-19 14:39:12 -0400,Update hydraul.c
+47b474f,2025-04-19 14:14:58 -0400,Update hydraul.c
+a9b5cc7,2025-04-19 13:44:59 -0400,Update input3.c
+30c2077,2025-04-19 12:54:45 -0400,InitSetting added to Link struct
+179ec25,2025-04-19 08:57:29 -0400,Merge pull request #845 from Mariosmsk/dev
+690ddad,2025-04-18 21:07:49 +0300,Fix typo - use errcode instead of status
+ab67dbd,2025-04-03 12:08:04 -0400,Merge pull request #843 from OpenWaterAnalytics/dev-doc
+2c667e6,2025-04-03 11:51:30 -0400,Trying to fix cmake scripts
+50f79c6,2025-04-03 11:31:43 -0400,CHM help build instructions deleted
+d4c41a2,2025-03-30 10:06:29 -0400,Updates to toolkit documentation
+bd97f66,2025-03-28 09:16:38 -0400,Update docs for version 2.3
+3da4b1d,2025-03-19 19:00:03 -0400,Merge pull request #840 from OpenWaterAnalytics/dev-demand_deficit_fix
+fff984d,2025-03-19 18:37:34 -0400,Limit demand deficit to be >= 0
+06284bb,2025-03-12 18:30:09 -0400,Merge pull request #834 from OpenWaterAnalytics/dev-curvetype
+6468ba9,2025-03-11 11:54:12 -0400,Include curve type in input file
+7947354,2025-02-24 17:03:25 -0500,Merge pull request #831 from OpenWaterAnalytics/dev-tags
+f37e493,2025-02-19 10:32:49 -0500,Fix copy/paste error in project.c
+0f7fb48,2025-02-19 10:18:52 -0500,Update input2.c
+bb543a0,2025-02-19 09:58:19 -0500,Unit test for get/set tags
+7a16739,2025-02-19 09:49:09 -0500,Set/Get node & link tags added
+c8db9c1,2025-02-18 08:55:38 -0500,Merge pull request #829 from OpenWaterAnalytics/dev-trace_node_fix
+054ebf3,2025-02-17 09:23:35 -0500,Adjust Trace Node index when node deleted
+a5bce31,2025-02-17 08:44:28 -0500,Fix Trace Node bug when new junction added
+03cbb89,2025-02-17 08:12:44 -0500,Merge pull request #827 from OpenWaterAnalytics/dev-disabled-controls
+70d5483,2025-02-11 15:38:30 -0500,Add read/write of disabled controls to input file
+e5c5e16,2025-02-11 12:05:03 -0500,Merge pull request #826 from OpenWaterAnalytics/dev-hydfile-fix
+6559413,2025-02-08 10:11:13 -0500,Close scratch hydraulics file between runs
+3201d84,2024-12-21 11:17:48 -0500,Merge pull request #821 from OpenWaterAnalytics/dev-fix-tank-mixing
+626b93a,2024-12-16 23:30:32 -0500,Corrections to 2-compartment tank mixing
+fbd005d,2024-08-06 08:39:55 -0400,Merge pull request #812 from Mariosmsk/add-EN_loadpatternfile
+3604f3f,2024-08-01 22:45:42 +0300,fix
+b16dacb,2024-08-01 17:06:32 +0300,Add a new pattern or use an existing pattern - EN_loadpatternfile
+17b14e2,2024-08-01 09:06:04 +0300,fix missing ')'
+03e889d,2024-08-01 08:58:13 +0300,Update epanet.c
+5335088,2024-07-31 19:48:19 +0300,Add EN_loadpatternfile, ENloadpatternfile
+2f4ae4c,2024-07-29 09:26:31 -0400,Merge pull request #811 from LRossman/dev-leakage
+cbf543f,2024-07-19 11:04:19 -0400,Code cleanup
+3e1702e,2024-07-13 18:00:20 +0300,Merge pull request #810 from OpenWaterAnalytics/update-old-build
+47e3451,2024-07-13 08:58:28 +0300,Update Makefile.bat
+3574bdf,2024-07-12 11:36:32 -0400,Merge pull request #808 from LRossman/dev-leakage
+5894b67,2024-07-08 08:49:59 -0400,Merge pull request #5 from LRossman/leakage
+6089b93,2024-07-02 20:19:45 -0400,Fix refactoring error in hydcoeffs.c
+5b2b88c,2024-06-26 18:08:02 -0400,Merge branch 'dev-leakage' into leakage
+68b73a1,2024-06-26 17:50:24 -0400,Fixes for PDA
+30a3fcb,2024-06-26 11:47:35 -0400,debug test_pda.cpp
+037ca41,2024-06-26 11:34:19 -0400,Adding Pipe Leakage Modeling
+b0796f3,2024-06-26 11:15:01 -0400,Adding leakage model
+cc9105f,2024-06-25 13:24:34 +0300,Merge pull request #804 from OpenWaterAnalytics/bugfix/compiler-fix
+31cfd60,2024-06-24 15:10:06 -0400,fixes compilation with old compilers and keeps our programming conventions of declaring variables
+94d136b,2024-06-24 15:07:33 -0400,Merge pull request #803 from OpenWaterAnalytics/bugfix/tank-never-drains
+0329819,2024-06-24 13:08:13 -0400,fixes regression related to tank fill/empty events
+59f7295,2024-06-18 13:23:36 -0400,Merge pull request #802 from YuChunTsao/add-INP-section-column-headings
+96cb4c9,2024-06-19 00:38:05 +0800,fix: Use two semicolons in each heading line
+d055157,2024-06-18 07:46:25 -0400,Merge pull request #801 from OpenWaterAnalytics/API_fixes
+317990a,2024-06-15 23:48:14 +0800,feat: Add column headings for sections in INP file
+6ac4156,2024-06-14 09:49:28 -0400,Update report.c
+62f0bc6,2024-06-13 07:49:14 -0400,Fix two legacy API functions
+109a93f,2024-06-05 15:47:04 -0400,Merge pull request #798 from zannads/dev-netadjlist_fix
+c79f125,2024-06-04 13:49:24 +0200,Fix: pass the network pointer to freeadjlists and not the project
+c131c4c,2024-06-03 11:24:11 -0400,Merge pull request #786 from Vitens/dev
+93a0b36,2024-05-31 21:36:57 +0200,Merge branch 'dev' into dev
+8b6be71,2024-05-29 08:25:19 -0400,Merge pull request #788 from OpenWaterAnalytics/dev-rename_emitter_backflow_keyword
+7b33487,2024-05-29 08:23:56 -0400,Merge pull request #797 from lbutler/big-fix-emitter-coefficient
+3758238,2024-05-29 08:22:48 -0400,Merge pull request #791 from zannads/dev-netadjlist_fix
+9958ef6,2024-05-29 08:15:43 -0400,Merge pull request #792 from zannads/dev-npipes_fix
+48934c7,2024-05-28 22:23:46 -0400,Updated ReleaseNotes for EN_EMITTER bug
+a74171f,2024-05-28 22:18:29 -0400,Fix emitter-related NaN errors by initializing zero EmitterFlow to 1.0.
+d50c673,2024-05-23 10:33:30 +0300,Fix Issue #790 - incorrect number of pipes
+9307913,2024-05-23 10:24:29 +0300,Proposed Fix for Issue #789
+7e66114,2024-05-11 12:37:52 -0400,Changes EMITTER BACKFLOW keyword
+9637f5c,2024-04-24 15:20:59 +0200,change names of new functions to ENgetnodevalues and ENgetlinkvalues
+4dff3bd,2024-04-23 11:31:17 +0200,add ENgetnodesvalues and ENgetlinksvalues methods
+ef234a1,2024-04-21 19:23:00 +0300,Merge pull request #784 from Mariosmsk/patch-4
+c5232f4,2024-04-21 19:13:14 +0300,fix badge macos link
+72eeb3d,2024-04-21 13:02:12 +0300,Merge pull request #781 from eladsal/update-build-script
+3d7cf9a,2024-04-21 12:09:28 +0300,Merge pull request #1 from Mariosmsk/retry-builds
+cd242aa,2024-04-21 11:48:57 +0300,add retry build.
+8bf2334,2024-04-21 11:48:49 +0300,add macos badge
+ac09675,2024-04-21 11:48:43 +0300,update cmake version
+c34ab39,2024-04-10 17:03:29 -0400,Merge pull request #779 from OpenWaterAnalytics/fix-conan-build
+e396bd8,2024-04-10 21:38:57 +0300,Update old build script
+efe4e21,2024-04-09 13:32:28 -0400,fixes conan build, adds enums to cmake
+7d36048,2024-03-21 12:39:11 -0400,Merge pull request #777 from OpenWaterAnalytics/dev-tank_validation_fix
+c24f334,2024-03-19 14:38:47 -0400,Update validate.c
+6b72b0a,2024-03-19 14:30:10 -0400,Merge pull request #776 from Mariosmsk/add-workflow-for-macos-build
+3139561,2024-03-19 14:29:36 -0400,Merge pull request #775 from Mariosmsk/update-workflows-rm-warnings
+19327c0,2024-03-19 14:29:11 -0400,Merge pull request #774 from Mariosmsk/patch-2
+630f9f0,2024-03-19 13:31:03 +0200,Create macos.yml
+1cf1b08,2024-03-19 13:18:11 +0200,Update workflows to use Node.js 20 due to deprecation of Node.js 16
+857aaf6,2024-03-19 12:43:38 +0200,Delete tests/outfile/data/enP1kAlM
+2f4e4e5,2024-03-18 13:37:07 -0400,Merge pull request #771 from OpenWaterAnalytics/dev-tank_overflow_fix
+029b441,2024-03-14 08:25:28 -0400,Merge pull request #759 from Mariosmsk/update-workflows
+6d6f244,2024-03-13 09:51:56 -0400,Merge pull request #766 from lbutler/update-readme-jan-2024
+482f658,2024-03-13 09:22:33 -0400,Account for mass lost in tank overflow
+0c3d444,2024-02-12 11:47:35 -0500,enhances build files with INSTALL options and fixes Conan
+ade7027,2024-01-25 12:34:20 -0500,Merge pull request #768 from OpenWaterAnalytics/dev-tank_validation_bug_fix
+5c90eaf,2024-01-25 12:21:09 -0500,Update validate.c
+6c2bf2f,2024-01-09 14:22:34 -0500,Add en_openx to release notes
+c6ab471,2024-01-09 14:14:19 -0500,Update release notes and remove depreciated constants
+dac67d4,2023-11-24 14:03:29 -0500,Reduce reallocs in EN_addnode & EN_addlink
+5fd17af,2023-10-17 09:20:48 -0400,Merge pull request #758 from OpenWaterAnalytics/dev-EN_openX
+ce77b19,2023-10-08 13:13:37 +0300,update workflows to include the header files in the artifact
+e7f9e26,2023-10-05 14:59:10 -0400,Update validate.c
+653ffac,2023-10-05 12:10:08 -0400,Update input3.c
+c0700c8,2023-10-05 11:37:13 -0400,Refactored validate.c
+5a03def,2023-10-04 10:09:02 -0400,Merge branch 'dev' into dev-EN_openX
+10d5079,2023-10-04 09:53:05 -0400,Add EN_openX function
+7b64012,2023-09-28 12:16:28 -0400,Merge pull request #752 from Mariosmsk/patch-1
+ec8609e,2023-09-28 12:08:24 -0400,Merge pull request #755 from lbutler/setcurvetype-support-EN_VALVE_CURVE
+667a15f,2023-09-25 09:25:34 +0300,Merge branch 'dev' into patch-1
+984e6b7,2023-09-25 09:23:50 +0300,Update ReleaseNotes2_3.md
+f8402c1,2023-09-16 08:13:27 +0300,Merge pull request #753 from eladsal/update_header_files_751
+05c0528,2023-09-15 11:53:02 -0400,Update EN_setcurvetype to support EN_VALVE_CURVE
+39ffaeb,2023-09-15 11:01:39 -0400,Merge pull request #754 from lbutler/getclosedlink-remove-recursion
+cfc0632,2023-09-14 16:00:34 -0400,Remove recursion in getclosedlink
+a0a6bd3,2023-09-14 15:32:12 -0400,Merge branch 'OpenWaterAnalytics:dev' into remove-getclosedlink-recursion
+8a84668,2023-09-14 13:35:05 +0300,Updated header files following #751
+d1cad76,2023-09-13 23:33:15 +0300,Update ReleaseNotes2_3.md
+c84c6ba,2023-09-13 14:54:16 -0400,Merge pull request #751 from OpenWaterAnalytics/682-request-additional-api-functions-for-enablingdisabling-rules-and-controls-nondestructively
+0754d08,2023-09-13 14:30:57 -0400,Update ReleaseNotes2_3.md
+8b28307,2023-09-13 09:18:08 -0400,clarifying documentation
+d0ab568,2023-09-13 09:14:57 -0400,using int/bool convention instead of new enum type
+06a43cd,2023-09-12 14:51:44 -0400,adds api support for enabling/disabling controls and rules
+630eed4,2023-09-11 18:43:04 -0400,Merge pull request #750 from OpenWaterAnalytics/dev-trace_node_fix
+a2c0ff7,2023-09-11 18:23:49 -0400,Fix trace node id parser error
+e420380,2023-08-17 16:36:39 -0400,Merge pull request #747 from OpenWaterAnalytics/dev-PCV_mod
+e81a280,2023-08-17 16:23:05 -0400,Update test_valve.cpp
+c7a4069,2023-08-17 15:12:31 -0400,Update test_valve.cpp
+6aa2a21,2023-08-17 14:54:59 -0400,Change PCV settings from fraction to percent
+4577af9,2023-08-10 11:44:22 -0400,Merge pull request #744 from 0tkl/dev
+2f63e51,2023-08-02 14:12:56 +0800,fix potential memory leaks
+b860f9b,2023-08-02 14:42:48 +0800,add a default value to controlIndex
+434cd68,2023-08-02 14:12:03 +0800,fix potential deref of a null pointer
+4ca66cc,2023-08-02 11:55:23 +0800,handle error codes in tests
+6b8f9c8,2023-07-27 10:37:40 -0400,Merge pull request #743 from OpenWaterAnalytics/dev-status_report
+dc721c5,2023-07-19 09:43:53 -0400,Update test_analysis.cpp
+353ba4e,2023-07-19 09:15:25 -0400,Allow API to get/set type of status report
+2825f96,2023-07-17 10:05:27 -0400,Merge pull request #739 from OpenWaterAnalytics/get-emitter-flow
+3acfb6d,2023-07-06 15:35:30 -0400,Added retrieval of emitter flow to the API
+59eafb8,2023-07-03 06:14:27 -0400,update comments on getclosedlink
+74cad01,2023-07-02 08:31:02 -0400,Remove recursion from getclosedlink
+8f1df08,2023-07-02 08:19:55 -0400,updated getclosedlink
+8933cf7,2023-06-30 12:26:29 -0400,Update report.c
+e7b2390,2023-06-30 12:20:03 -0400,Update report.c
+7172138,2023-06-30 12:00:52 -0400,Update report.c
+6060ca8,2023-06-30 11:27:33 -0400,Update report.c
+d3b19fd,2023-06-30 11:24:26 -0400,Update report.c
+e73d75e,2023-06-30 11:11:50 -0400,limit recursion
+38ca025,2023-06-26 23:27:15 -0400,On add-pressure-unit-selection: !!GitHub_Desktop<add-pressure-unit-selection>
+d971e34,2023-06-26 23:27:15 -0400,index on add-pressure-unit-selection: 9cde320 added function updateruleunits
+789d42f,2023-06-08 10:37:45 -0400,Merge pull request #732 from OpenWaterAnalytics/dev-controls
+2b346c5,2023-06-08 10:21:35 -0400,Update ReleaseNotes2_3.md
+a9079b0,2023-05-13 12:29:35 -0400,Allow simple controls to set valves OPEN/CLOSED
+1ff1e8f,2023-05-04 16:50:15 -0400,Merge pull request #729 from jamesuber/adjustpumpparams-bugfix
+f709c19,2023-04-22 17:40:25 -0400,correct error in adjustpumpparams() where a curveindex was being used instead of the pump index
+7ae9c28,2023-04-15 12:57:01 -0400,setlinkvalue missing a break statement
+583cca0,2023-04-15 11:01:08 -0400,Merge pull request #721 from OpenWaterAnalytics/dev-PDA-coeffs
+44ab8a4,2023-04-01 11:10:49 -0400,Merge pull request #719 from lbutler/add-pressure-unit-selection
+9cde320,2023-03-30 16:22:58 -0400,added function updateruleunits
+9c79a65,2023-03-29 10:35:14 -0400,Use barrier functions for PDA & emitters
+56c569b,2023-03-16 19:53:25 -0400,Update epanet2_enums.h
+6bc1efa,2023-03-16 16:21:55 -0400,Check pressure units in metric are not set to PSI
+4beebbd,2023-03-16 16:13:49 -0400,Add EN_PRESS_UNITS to EN_getoption & EN_setoption
+ffe2724,2023-03-15 12:07:31 -0400,Merge pull request #718 from lbutler/update-building.md
+6293b73,2023-03-15 11:35:34 -0400,Merge pull request #717 from lbutler/update-releasenotes2_3.md
+40cd9ac,2023-03-15 11:33:01 -0400,Update BUILDING.md to mention windows tutorial
+0e4c400,2023-03-15 11:13:47 -0400,Update ReleaseNote2_3.md
+64c3f96,2023-03-10 22:44:21 -0500,test unofficial changes
+f530f95,2023-03-09 14:34:39 -0500,Update BUILDING.md to include testing information
+278037b,2023-02-22 10:04:40 -0500,Merge pull request #713 from lbutler/add-cms-flow
+c795121,2023-02-20 11:46:30 -0500,test mixed pressure units
+8e68b77,2023-02-20 10:24:11 -0500,Updated outfile to support cubic meters/sec
+09290da,2023-02-20 10:05:51 -0500,Redefinition during test
+843f1f4,2023-02-20 09:43:42 -0500,Added support for cubic meters per second (CMS)
+639e037,2023-02-18 11:45:55 -0500,Merge pull request #710 from lbutler/fix-time-control-input-tokens
+3856a63,2023-02-15 14:46:39 -0500,Fixes incorrect hour set with >9 input tokens
+8d8ccaf,2023-02-08 15:16:05 -0500,Merge pull request #706 from OpenWaterAnalytics/dev-emitter-backflow
+61b03b8,2023-02-07 22:59:18 -0500,Updating the docs
+847fa82,2023-02-05 15:16:20 -0500,Add emitter backflow option
+9814564,2023-02-05 12:29:01 -0500,Merge pull request #705 from OpenWaterAnalytics/dev-tank-fix
+869e441,2023-02-03 11:29:05 -0500,Revise status test for full/empty tanks
+4986ec8,2023-02-01 19:10:57 -0500,Merge pull request #704 from OpenWaterAnalytics/dev_string_literals
+2f85616,2023-01-29 12:34:58 -0500,Allows string literals as arguments in C++ clients
+245f8f6,2023-01-29 12:19:04 -0500,Merge pull request #702 from OpenWaterAnalytics/dev-read-coords
+f601021,2023-01-26 12:50:26 -0500,Ignore errors in coords. read from file
+7dab25e,2023-01-20 09:47:17 -0500,Merge pull request #688 from OpenWaterAnalytics/681-request-additional-api-function-for-getting-finer-grained-time-step-information
+57ae3ee,2023-01-19 14:16:50 -0500,Update ReleaseNotes2_3.md
+e2df3e8,2023-01-19 20:45:30 +0200,Adding support for VB
+2705f8a,2023-01-19 11:52:18 -0500,Merge branch 'dev' into 681-request-additional-api-function-for-getting-finer-grained-time-step-information
+736f5eb,2023-01-19 09:50:50 -0500,updates function signatures to use int-casted enum
+3a0cc01,2023-01-19 09:02:02 -0500,Merge pull request #689 from OpenWaterAnalytics/683-request-better-logging-functionality
+30c511c,2023-01-19 09:01:43 -0500,Merge branch 'dev' into 683-request-better-logging-functionality
+bf6fcc4,2023-01-19 07:49:22 +0200,Merge pull request #701 from Mariosmsk/dev
+86085d4,2023-01-17 00:32:39 +0200,Add a cron schedule in actions per month to create artifacts without any commit
+6acce3f,2022-08-23 08:55:50 -0400,Merge pull request #699 from OpenWaterAnalytics/dev-pcv-valve
+5b3d75c,2022-08-16 13:13:39 -0400,Updated language binding files added.
+6db1719,2022-08-16 11:47:44 -0400,New positional control valve added
+ec4d1f5,2022-08-16 08:01:00 +0300,Merge pull request #698 from eladsal/update-readme-tests
+3485551,2022-08-14 09:06:44 +0300,Create workflow build bagges
+3287cc3,2022-08-14 09:02:20 +0300,Remove travis-ci.org badge
+c766d4e,2022-08-12 13:25:28 -0400,Merge pull request #687 from OpenWaterAnalytics/680-add-support-for-conan-dependency-manager
+a685952,2022-08-11 10:41:39 -0400,Merge pull request #696 from OpenWaterAnalytics/dev-fcv-fix
+68660d8,2022-08-10 08:04:22 +0300,Merge pull request #691 from Mariosmsk/workflows
+6ccddb8,2022-08-08 18:37:07 -0400,Update hydstatus.c
+2d78304,2022-08-08 18:08:45 -0400,Fix for FCV problem
+bed2fdc,2022-08-08 14:31:12 -0400,Merge pull request #694 from OpenWaterAnalytics/dev-prv-psv-fix
+9b3007f,2022-08-08 12:02:22 -0400,adds projectless function declarations
+b139684,2022-08-08 11:58:09 -0400,fixes non-camelcase convention
+79b4fa4,2022-08-05 16:59:32 -0400,Update hydcoeffs.c
+93389ad,2022-08-03 19:52:01 -0400,Fix for PRV directly downstream of a PSV
+0bf09b5,2022-07-28 23:37:10 +0300,build libs / win & linux
+41887e9,2022-07-27 16:37:49 -0400,adds client callback API function
+5f8ee49,2022-07-27 14:18:50 -0400,adds an API function to get information about upcoming events
+92cef46,2022-07-27 14:01:45 -0400,Create conanfile.py
+44ad248,2022-06-29 11:30:01 -0400,Merge pull request #685 from OpenWaterAnalytics/dev-release_notes_update
+0b1e540,2022-06-27 13:00:02 -0400,Update ReleaseNotes2_3.md
+c07674e,2022-06-14 10:28:24 -0400,Update before-test.cmd
+f3b8e9d,2022-06-14 10:22:43 -0400,Update before-test.cmd
+13b5da5,2022-06-14 10:07:50 -0400,attempting hotfix for appveyor issues.
+09b44ad,2022-06-14 09:38:37 -0400,Update AUTHORS file - organize by release and order alphabetically (#573)
+c500cdd,2022-06-14 09:36:56 -0400,fixes issue where a string position an underflow (#676)
+d131ae1,2022-04-28 22:42:13 -0400,fixes issue where a string position an underflow
+5d5ad56,2022-04-07 09:09:06 -0400,updated documentation to be current with latest dev branch
+4d66af1,2022-04-05 09:15:18 -0400,Merge pull request #669 from OpenWaterAnalytics/dev-pump-fix
+d554999,2022-04-05 08:36:01 +0300,Merge pull request #670 from lbutler/doc-toolkit-usage-fix
+dc7e9f3,2022-04-05 07:27:54 +0300,Merge pull request #672 from lbutler/dev-gpv-control-fix
+9c0b576,2022-03-30 23:13:48 -0400,Fix for GPV controls in EN_saveinpfile
+0945683,2022-03-30 11:14:05 -0400,Bug in example code for detecting error conditions
+4bdbe6c,2022-03-30 09:22:01 -0400,Modify const. HP pump
+2beb5fb,2022-03-30 09:12:15 -0400,Merge pull request #667 from OpenWaterAnalytics/dev-fix-tanktimestep
+cecc941,2022-03-20 09:27:37 -0400,Update to force re-check of PR
+dbd3f63,2022-03-19 13:25:55 -0400,Fixes possible integer overflow
+c8a3ead,2022-03-19 08:53:15 -0400,Merge pull request #634 from OpenWaterAnalytics/dev-PDA_mod
+750dda1,2022-02-14 15:38:21 -0500,Update ReleaseNotes2_3.md
+0687aa6,2022-02-14 15:10:18 -0500,Update ReleaseNotes2_3.md
+f865cbb,2022-02-14 13:43:48 -0500,Update ReleaseNotes2_3.md
+a63f553,2022-02-14 11:19:00 -0500,Adds PDA convergence test
+070901d,2022-02-14 11:03:22 -0500,Update hydsolver.c
+d5c9a95,2022-01-18 11:01:10 -0500,Merge pull request #660 from OpenWaterAnalytics/dev-DefaultPatternFix
+43092c8,2022-01-15 11:37:35 -0500,Update test_node.cpp
+f9189d0,2022-01-15 11:21:24 -0500,Updates to default demand pattern fix
+14de37d,2022-01-14 09:09:32 -0500,Adjust default pattern index after a pattern is deleted
+afda609,2022-01-14 08:50:33 -0500,Adds get/set for default demand pattern to toolkit
+64f0d15,2021-09-28 10:09:26 +0300,Merge pull request #657 from OpenWaterAnalytics/dev-Qualflag_Fix
+4b2d686,2021-09-27 10:50:46 +0300,Merge pull request #649 from jamesuber/dev
+d552d0c,2021-09-25 09:32:20 -0400,Removes silent change to WQ option for 0 duration run
+3be813f,2021-09-23 11:04:19 -0400,Return MISSING as initial valve setting
+886a5cf,2021-09-08 10:49:57 -0400,Bugfix for En_getaveragepatternvalue()
+7baf992,2021-08-02 06:16:22 +0300,Merge pull request #646 from Mariosmsk/returnErrcodeNodeNotTank
+7a07976,2021-08-01 20:34:10 +0300,Merge pull request #648 from sahandt/patch-1
+1df2ea8,2021-07-20 22:58:43 -0400,Method parameter types need to match definitions in epanet2.c
+79b2c4c,2021-06-26 17:11:33 +0300,add new errcode 263 "node is not a tank"
+6728a59,2021-06-26 12:01:19 +0300,node is not a tank
+45c62f6,2021-06-18 12:39:26 +0300,Merge pull request #641 from eladsal/zero-rcoeff
+b1255de,2021-06-15 16:15:54 +0300,Fix check for roughness coefficient
+650d8e8,2021-04-21 00:24:27 -0400,Revert "Update setup.py"
+b77094e,2021-04-21 00:09:36 -0400,Update setup.py
+c64cbe1,2021-04-20 15:59:23 -0400,Restoring previous versions of nrtest files that work
+a652175,2021-04-20 15:24:09 -0400,Update test-config.sh
+5c0a6ef,2021-04-20 15:04:18 -0400,Update setup.py
+ac86db1,2021-04-20 10:25:43 -0400,Adjustment to regression test criteria - 3
+9e28629,2021-04-20 10:13:03 -0400,Adjustment to regression test criteria - 2
+e58d36c,2021-04-20 09:36:01 -0400,Revert "Update hydcoeffs.c"
+1341694,2021-04-20 09:30:11 -0400,Update hydcoeffs.c
+9224d67,2021-04-20 09:26:34 -0400,Adjustment to regression test criteria
+bec7c0d,2021-04-17 10:24:42 -0400,Remove line comments with release number
+175544f,2021-04-16 17:23:07 -0400,Merge pull request #624 from OpenWaterAnalytics/dev_tank_fix
+409a600,2021-04-16 17:01:54 -0400,Improved flow checks for full and empty tanks
+506f0ec,2021-03-08 13:49:34 +0200,Merge pull request #630 from eladsal/comments_bas
+427fb03,2021-02-24 17:51:29 +0200,Add comments APIs to VB bas include file
+aaa9b44,2021-01-26 15:47:04 -0500,Removed unreferenced variable in hydstatus.c
+9d22564,2021-01-26 15:41:01 -0500,Fix having flow out of an empty tank
+1e0c65e,2020-12-18 11:11:46 -0500,Merge pull request #619 from OpenWaterAnalytics/fix_energy_usage
+854abdf,2020-12-09 20:26:13 -0500,Update hydraul.c
+533466b,2020-11-19 16:23:24 -0500,PDA changes to improve convergence
+9525d73,2020-11-19 16:12:07 -0500,Merge pull request #618 from OpenWaterAnalytics/dev-EN_STARTTIME
+0d31da8,2020-11-08 10:23:03 -0500,Remove redundant check on EN_STARTTIME
+b6eddc0,2020-11-08 10:10:16 -0500,Add EN_STARTTIME to EN_settimeparam function
+9b5a056,2020-11-08 09:44:10 -0500,Merge pull request #617 from OpenWaterAnalytics/dev-fix-valve-settings
+a76cc51,2020-11-05 21:54:10 -0500,Allow negative EN_SETTING value in EN_setlinkvalue
+ab3eda2,2020-09-30 13:57:08 -0400,Merge pull request #614 from Ostoveni/dev
+474afda,2020-09-30 16:52:00 +0200,Correct comment
+ff00c1a,2020-09-30 10:03:29 -0400,Merge pull request #613 from OpenWaterAnalytics/fix_energy_usage
+bc0ff50,2020-09-30 15:12:11 +0200,Header file for C#
+9707075,2020-09-21 16:42:54 +0300,Merge pull request #611 from csweetapple/fix/correct-vmin-calculation
+bca3b99,2020-09-20 19:37:15 -0400,Fixes error in energy usage for tank pumps
+35aa9f8,2020-08-18 16:44:33 +0100,Fix vmin calculation
+d11907a,2020-08-12 07:18:42 +0300,Merge pull request #609 from lxsinske/dev-fix-garbled_Network_has_unconnected_nodes_error
+ec11556,2020-08-10 11:20:51 +0300,Change error number 2331 to 234
+32732db,2020-08-05 18:43:17 +0200,This solves the garbled error message and optionally adds an improved specific error message, which existed in EPANET 2.1 when a network has unconnected nodes. Another similar case in was code found and corrected with the same pattern, but could not be tested.
+80b3027,2020-07-16 15:23:26 -0400,modifies function declarations with unambiguous "out_" prefixes where output parameters are passed. This is a minor change that does not affect the API or any function implementations, but has great benefits to both readability and SWIG-wrapping. (#605)
+bda4d41,2020-07-16 10:46:56 -0400,Merge branch 'dev' into dev_pump_battery
+1611c4f,2020-07-16 10:32:39 -0400,Added initial pump group count to pump object
+8cf5a17,2020-07-15 15:15:23 -0400,Merge pull request #580 from OpenWaterAnalytics/dev_2.3
+87d1b2e,2020-07-15 14:58:58 -0400,Update modules.dox
+951c7ce,2020-07-11 17:12:49 -0400,Refactor tank mixing zone volume
+71a733e,2020-07-10 15:42:34 -0400,Add missing break statement after update from dev
+67f7d8f,2020-07-10 14:36:46 -0400,Merge branch 'dev' into dev_2.3
+9c9a661,2020-07-10 11:40:23 -0400,modifies function declarations with unambiguous "out_" prefixes where output parameters are passed. This is a minor change that does not affect the API or any function implementations, but has great benefits to both readability and SWIG-wrapping.
+bdac8d3,2020-06-28 19:55:03 +0300,Merge pull request #604 from Mariosmsk/dev
+e0745e9,2020-06-25 20:22:12 +0300,Update epanet.c
+532f89d,2020-06-25 20:11:27 +0300,Net1.inp have 0 MinorLoss / GUI accepts values zero for MINORLOSS. Similar to the parameter Power of pumps
+11386e4,2020-06-04 16:36:54 -0400,Merge pull request #599 from lepton1979/dev_issue532
+ed2c776,2020-05-31 12:18:33 -0400,Update hydraul.c
+da33386,2020-05-31 12:00:56 -0400,Update epanet2_enums.h
+cdb4b99,2020-05-31 11:49:15 -0400,Merge branch 'dev' into dev_issue532
+321600d,2020-05-31 11:43:25 -0400,Update hydcoeffs.c
+6b315b3,2020-05-31 11:32:54 -0400,Update input3.c
+a90b533,2020-05-31 11:30:08 -0400,Update hydraul.c
+1c24243,2020-05-31 10:45:08 -0400,Update epanet2_enums.h
+9b42b19,2020-05-31 16:36:45 +0300,Merge pull request #598 from OpenWaterAnalytics/dev_feature_in_control
+d03327c,2020-05-29 22:28:45 +0300,Merge pull request #596 from jamesuber/dev
+e7ccf52,2020-05-22 21:43:14 +0300,Update include files
+949022e,2020-05-22 11:45:52 -0400,API access to incontrols() for information about node/link controls participation
+0adf9ee,2020-05-11 23:10:19 +0200,Add analytical formula for efficiency calculation
+d189ebd,2020-04-25 21:14:47 +0200,Change initial flow to take account group of pumps in parallel
+7f4d467,2020-04-25 21:00:28 +0200,Add GroupCount to pump curve equations such that hydraulics of a group of parallel pumps are appropriately modeled
+cab01ee,2020-04-25 20:51:09 +0200,Add GroupCount when checking if link flow exceeds max. flow delivered by (group of) pumps
+6af72fd,2020-04-19 19:17:14 +0300,Merge pull request #594 from eladsal/dev
+37342c7,2020-04-19 18:05:08 +0300,Another option for EN_settankdata fix
+37a58a4,2020-04-19 09:25:36 -0400,Update epanet.c
+99f09f1,2020-04-19 09:16:08 -0400,A simpler fix to EN_settankdata
+3f515e7,2020-04-19 09:42:43 +0300,Fix EN_settankdata for elevation with SI units
+b259f87,2020-04-19 08:07:58 +0300,Merge pull request #590 from eladsal/update-vb-bas
+21b98a9,2020-04-17 12:25:51 +0200,Add pump group count if keyword GROUPCOUNT present in the .inp file
+5ebd5f5,2020-04-17 12:22:48 +0200,Add GROUPCOUNT position in the .inp file if GroupCount setting > 1
+23473d0,2020-04-17 12:15:50 +0200,Defines constant w_GROUPCOUNT equal "GROUPCOUNT"
+10b702d,2020-04-15 00:06:26 +0200,Initialize with a default value pump->GroupCount = 1 in pumpdata
+98d093d,2020-04-14 23:54:12 +0200,Add case EN_PUMP_GROUPCOUNT in EN_getlinkvalue and EN_setlinkvalue
+e19cd74,2020-04-14 23:37:50 +0200,Add EN_PUMP_GROUPCOUNT in EN_LinkProperty
+241ebe9,2020-04-14 13:06:47 -0400,Merge pull request #591 from mcneish1/valgrind-issues-dev
+b64e070,2020-04-13 09:39:58 -0400,Update project.c
+53db2b0,2020-04-12 23:53:42 +0200,Adds int type GroupCount to Pump Object Spump
+ee5e910,2020-04-11 11:23:39 -0700,Alloc, free persistent parts of Hydraul in allocdata, rather than in allocmatrix
+f358e39,2020-04-11 10:47:40 -0700,Make node degree list local to factorize
+6d57fb2,2020-04-09 00:07:58 +0200,modified the .gitignore file to ignore the folder with my test_case files
+6ddea72,2020-03-29 10:52:08 +0300,Update epanet2.bas
+d8ba9b1,2020-03-25 09:18:36 +0200,Merge pull request #589 from csweetapple/dev
+364ad08,2020-03-23 22:14:02 +0000,Limit EN_STARTTIME parameter value to SECperDAY
+21e1e4c,2020-03-21 17:13:40 +0000,Allow start time to be set with EN_settimeparam
+62d6fca,2020-02-17 08:05:19 +0200,Merge pull request #587 from eladsal/fix-link
+c7b32c1,2020-02-15 19:33:57 +0200,Fix link in README.md
+24e77cf,2020-02-13 12:17:54 -0500,Revised hydraulic solver
+3abd02f,2020-02-11 21:14:10 +0200,Merge pull request #585 from Mariosmsk/fix_initsetting583
+fa794e4,2020-02-10 10:59:43 -0500,Modified pump and FCV hydraulics
+a9ab376,2020-02-09 17:25:33 -0500,Revert "Replaced status checking for pumps & FCVs"
+a3537b7,2020-02-09 16:58:37 -0500,Revert "Changed benchmark results for EN_getstatistic test"
+25f9a6f,2020-02-09 22:05:40 +0200,fix EN_INITSETTING
+7e3d5e1,2020-02-07 13:49:54 -0500,Changed benchmark results for EN_getstatistic test
+3ee30ce,2020-02-07 10:44:52 -0500,Replaced status checking for pumps & FCVs
+80f9acf,2020-02-04 10:01:23 -0500,Network building enhancements
+8c6c535,2019-12-12 11:59:10 -0500,Update AUTHORS
+588a9da,2019-12-11 14:20:25 -0500,resolve conflicts on merge
+77243b1,2019-12-11 20:13:01 +0100,Add author to release notes (#571)
+4d8d82d,2019-12-10 10:19:36 -0500,v2.2
+6639ce9,2019-12-09 09:56:50 -0500,adding contributor to notes
+5f7fd76,2019-12-09 09:55:56 -0500,2.2 revised dox
+c0fe89c,2019-12-07 21:16:58 -0500,possessive vs contraction
+0ca1a0b,2019-12-07 20:49:21 -0500,cleanup of readme links and unused files
+f1ba648,2019-12-06 10:20:20 -0500,version 2.2 html dox
+b5eb1e9,2019-12-06 10:16:34 -0500,updates CI badges
+02d7c03,2019-12-06 10:06:29 -0500,Adding text, "list of authors," to license file (#569)
+865a16c,2019-12-06 10:05:44 -0500,Update README.md (#539)
+8d9f857,2019-12-05 16:03:31 -0500,Merge pull request #568 from OpenWaterAnalytics/lrossman-Pump_Bug_Fix
+d05ea20,2019-12-05 10:16:12 -0500,Fixes problem with re-opening const. HP pumps
+b3a306f,2019-12-05 10:03:32 -0500,Merge pull request #567 from OpenWaterAnalytics/lrossman-ReleaseNotesUpdate
+21defae,2019-12-04 10:56:01 -0500,Update ReleaseNotes2_2.md
+1d2cf68,2019-12-04 09:59:56 -0500,Update README.md
+5288bc8,2019-12-04 09:23:27 -0500,Merge pull request #566 from OpenWaterAnalytics/lrossman-doc_correction
+e11740c,2019-12-02 11:26:50 -0500,Correction made to doc files
+f181524,2019-12-02 11:17:13 -0500,Merge pull request #565 from OpenWaterAnalytics/lrossman-input3_bug_fix
+3935247,2019-11-29 15:56:33 -0500,Fixes a "copy over" bug in input3.c
+c16c861,2019-11-21 16:58:18 +0200,HTML Users Guide
+3259a8c,2019-11-21 16:55:49 +0200,PDF Guide
+f87865a,2019-11-19 09:40:11 -0500,Merge pull request #562 from OpenWaterAnalytics/lrossman-valvecheck_fix
+02173df,2019-11-16 20:32:26 +0200,Merge pull request #560 from OpenWaterAnalytics/eldemet-patch-1
+2033ddf,2019-11-15 12:55:29 -0500,Fixed editing errors made to project.c
+94b6cb2,2019-11-15 12:50:54 -0500,Restored prior update to project.c that got overwritten
+ce2a27f,2019-11-15 11:53:09 -0500,Bug fix for valvecheck function
+88e09ba,2019-11-15 09:57:32 -0500,fixes a crashing issue in freedata (#559)
+5993895,2019-11-15 09:14:42 +0200,Incorrect characterd
+4c82d7c,2019-11-14 09:42:10 -0500,fixes a crashing issue in freedata
+45b28f5,2019-11-12 10:41:28 -0500,Merge pull request #557 from OpenWaterAnalytics/lrossman-setheadcurveindex
+bacedc8,2019-11-12 10:04:45 -0500,Update epanet2.pas
+6c54bb3,2019-11-09 09:36:10 -0500,Adds error check to EN_setheadcurveindex
+d15ac77,2019-11-08 09:55:59 -0500,Merge pull request #555 from OpenWaterAnalytics/lrossman-EN_getrule
+88d343d,2019-11-06 11:34:43 -0500,Updating the docs
+9998466,2019-11-05 10:09:21 -0500,Bug fix for EN_getrule
+7400fad,2019-11-05 09:59:28 -0500,Merge pull request #551 from OpenWaterAnalytics/lrossman-EN_setcurve
+3bd4039,2019-11-02 11:17:25 -0400,Bug fix for EN_setcurve
+3eb632f,2019-10-31 11:14:43 -0400,Update AUTHORS
+33f9d63,2019-10-31 10:27:28 -0400,Replaced OWA copyright with "(see AUTHORS)".
+271d855,2019-10-31 10:17:26 -0400,Merge pull request #549 from OpenWaterAnalytics/lrossman-vertices
+5845cee,2019-10-31 09:54:04 -0400,Update README.md
+55e2879,2019-10-30 15:11:20 -0400,Updates the docs
+1709b12,2019-10-29 20:09:56 -0400,Fixes to EN_addlink and EN_deletelink
+7aadc83,2019-10-29 16:33:40 -0400,Adds link vertex get/set functions to the API
+d5becaf,2019-10-29 16:09:47 -0400,Merge pull request #547 from OpenWaterAnalytics/lrossman-ENgetresultindex
+b640a86,2019-10-26 11:25:09 -0400,Adds EN_getresultindex function to the API
+344700a,2019-10-16 15:07:14 -0400,Fixes problems with EN_addnode() (#543)
+5f7fd55,2019-10-09 10:47:45 -0400,Return error if node/link name is too long (#535)
+e7fa5fe,2019-10-09 10:36:39 -0400,Update README.md
+50d6d1b,2019-10-09 09:05:37 -0400,Update README.md
+5601973,2019-10-08 10:17:52 -0400,Merge pull request #537 from OpenWaterAnalytics/lrossman-hydcoeffs_refactor
+6e80fd8,2019-10-07 14:27:47 -0400,Update ReleaseNotes2_2.md
+1501204,2019-10-04 10:01:41 -0400,Refactor of hydcoeffs.c
+ad139a4,2019-10-04 09:34:43 -0400,Merge pull request #536 from OpenWaterAnalytics/lrossman-pump_bug_fix
+38278f7,2019-09-30 15:51:17 -0400,Fixed use of strncpy in xstrcpy()
+3300ef0,2019-09-30 14:05:38 -0400,getTmpName() and xstrcpy() made safer
+f2ef979,2019-09-26 11:18:39 -0400,Removed dependence on unistd.h in project.c
+da1253f,2019-09-26 11:01:01 -0400,Fixes bugs in pump and demand head loss gradients
+92a0d32,2019-09-25 14:24:59 -0400,build/run tests in GH actions
+d111fbf,2019-09-25 13:05:20 -0400,reverts posix include (#533)
+647abd7,2019-09-25 10:47:38 -0400,fixes mkstemp file handle-leaking behavior (#529)
+9f1634a,2019-09-19 11:29:14 -0400,welcome to the Actions beta
+cb16654,2019-09-19 11:27:21 -0400,Update ccpp.yml
+2e42931,2019-09-19 11:20:15 -0400,trial actions config
+9572acd,2019-08-12 09:48:57 -0400,Merge pull request #527 from Mariosmsk/fix_delete_link_comment
+eb04559,2019-08-10 11:51:21 +0300,rm set to null in functions EN_deletenode, EN_deletelink
+1ce6901,2019-08-08 15:50:19 +0300,fix in EN_deleteLink
+0f3005e,2019-08-06 20:13:04 -0400,Merge pull request #525 from OpenWaterAnalytics/lrossman_ENsetlinkvalue_bug_fix
+803bad0,2019-08-05 14:08:18 -0400,Fixes EN_setlinkvalue bug
+153fa3d,2019-08-01 10:22:41 -0400,Merge pull request #523 from OpenWaterAnalytics/lrossman-build_script_updates
+f5acb16,2019-07-31 09:24:29 -0400,Build script updates
+bbe4fb7,2019-07-27 08:24:49 +0300,Merge pull request #520 from OpenWaterAnalytics/lrossman/doc_updates
+20ae172,2019-07-26 19:06:59 -0400,Update BUILDING.md
+9c51160,2019-07-26 11:49:18 -0400,Merge pull request #519 from OpenWaterAnalytics/lrossman/doc_updates
+d66f023,2019-07-26 11:15:53 -0400,Updates to the docs
+53ff8e7,2019-07-26 11:08:18 -0400,Merge pull request #518 from OpenWaterAnalytics/rossman/CmakeLists_changes
+3716d33,2019-07-24 19:02:00 -0400,Add -MT switch for CMake Windows build
+560105c,2019-07-24 17:55:55 -0400,Merge pull request #516 from Mariosmsk/fix_rule_actions
+4e2e6c9,2019-07-24 16:13:37 +0300,Fix EN_getElseaction and EN_setelseaction
+a184a3a,2019-07-22 17:59:42 -0400,Merge pull request #515 from OpenWaterAnalytics/dev-PDA_fixes
+0760648,2019-07-22 17:42:29 -0400,Fixes Overflow and PDA tests not being run
+844ebde,2019-07-22 22:26:46 +0300,Merge pull request #514 from OpenWaterAnalytics/dev-PDA_fixes
+051519d,2019-07-22 12:22:48 -0400,Another minor change to force another CI test
+a22a3cf,2019-07-22 11:25:12 -0400,Minor update to force new CI test
+a89f339,2019-07-22 09:50:41 -0400,PDA fixes
+3fe11b9,2019-07-17 15:19:25 -0400,rethinking the python wrapper (#511)
+4cc1691,2019-07-06 08:57:46 +0300,Merge pull request #510 from Mariosmsk/patch-2
+006db4a,2019-06-29 10:08:37 -0400,Merge pull request #508 from OpenWaterAnalytics/win_build_script_fix
+f267eeb,2019-06-26 20:36:58 +0300,Update Makefile2.bat
+a052e87,2019-06-26 11:47:48 -0400,Update Makefile.bat
+57403b8,2019-06-21 11:44:25 -0400,Merge pull request #505 from OpenWaterAnalytics/feature-tankoverflow
+85e2f2c,2019-06-20 15:00:18 -0400,Identifies overflowing tank in Status Report
+d17a7df,2019-06-19 11:00:23 -0400,Update input3.c
+5fafb4c,2019-06-19 16:28:47 +0300,Updating VB include files
+2bec884,2019-06-17 09:54:26 -0400,Updating docs for tank overflow feature
+9669742,2019-06-17 09:16:04 -0400,Adds tank overflow feature
+fe92a99,2019-05-31 12:54:00 -0400,Merge pull request #503 from OpenWaterAnalytics/lrossman-dev-doc
+2bbbf73,2019-05-30 13:28:32 -0400,Numerous updates to project documentation
+39f66b8,2019-05-29 11:19:14 -0400,Merge pull request #501 from OpenWaterAnalytics/lrossman-dev-doc
+6a5aa37,2019-05-28 11:17:44 -0400,Change default properties for new pipe created with EN_addlink (issue #500)
+17b4ffb,2019-05-24 12:25:23 -0400,Merge pull request #499 from OpenWaterAnalytics/lrossman-dev-doc
+40c39fd,2019-05-24 10:33:36 -0400,Fixes problem with findpattern() function (issue #498)
+f75a946,2019-05-16 19:04:01 -0400,Merge pull request #496 from OpenWaterAnalytics/lrossman-dev-doc
+e4e6d49,2019-05-16 18:50:53 -0400,Update BUILDING.md
+0e48056,2019-05-16 13:07:33 -0400,Update BUILDING.md
+c37cd1e,2019-05-16 00:55:53 -0400,Update BUILDING.md
+2708e88,2019-05-16 01:33:32 +0300,Merge pull request #492 from Mariosmsk/update_win_build_folder
+9e80fe6,2019-05-16 01:24:46 +0300,Move BuildAndTest.md to the tools directory
+55c9607,2019-05-15 16:36:26 +0300,move win_build.md to root dir and renaiming to BUILDING.md
+720b5da,2019-05-15 08:48:55 -0400,Merge pull request #493 from OpenWaterAnalytics/lrossman-dev
+d51b65f,2019-05-15 12:55:13 +0300,add help file win_build.md
+ed1acd7,2019-05-14 13:17:17 -0400,Update run\CMakeLists.txt
+93db1ca,2019-05-14 13:12:20 -0400,updates AUTHORS and generator script
+fc84e2b,2019-05-14 12:26:13 -0400,updates authors
+efb189a,2019-05-14 00:00:03 -0400,Fix refactor of types.h
+c9b8369,2019-05-13 23:49:19 -0400,Removes _DEBUG directives from all source files
+46e2297,2019-05-13 11:30:39 -0400,Merge pull request #489 from OpenWaterAnalytics/lrossman-dev
+f8cf7e0,2019-05-13 11:05:58 -0400,Restored CI testing of status reports
+9a00015,2019-05-13 12:14:27 +0300,rm WinSDK folder and update Makefiles
+c8c2808,2019-05-13 07:14:10 +0300,Merge pull request #487 from OpenWaterAnalytics/eldemet-patch-3
+5c04173,2019-05-13 07:13:54 +0300,Merge pull request #486 from OpenWaterAnalytics/eldemet-patch-2
+d0634c9,2019-05-13 07:13:38 +0300,Merge pull request #485 from OpenWaterAnalytics/eldemet-patch-1
+4c9379d,2019-05-13 07:11:57 +0300,Merge pull request #479 from samhatchett/dev
+dae0fc0,2019-05-12 20:02:07 -0400,Removing status reports from CI testing
+0930a33,2019-05-12 19:20:16 -0400,Minor format change to status report
+ac21d4a,2019-05-12 10:47:16 +0300,Delete epanet2.def
+746da86,2019-05-12 10:31:45 +0300,Update Makefile2.bat
+8c4aa0e,2019-05-12 10:27:45 +0300,Update Makefile.bat
+d71776d,2019-05-11 08:48:42 -0400,Merge pull request #481 from OpenWaterAnalytics/lrossman-dev
+1c9ee77,2019-05-09 13:53:57 -0400,Documentation edits
+21ff7c0,2019-05-09 13:08:24 -0400,Updates to doc files
+178ad57,2019-05-09 20:01:14 +0300,Update rules.c
+55bf038,2019-05-09 11:43:06 -0400,Update CODE_OF_CONDUCT.md
+253d74d,2019-05-09 10:40:58 -0400,Update test_demand.cpp
+365ab00,2019-05-09 10:26:40 -0400,Refactors the API's demand editing functions
+cf9c2a9,2019-05-08 14:45:34 -0400,Merge pull request #3 from samhatchett/add-code-of-conduct-1
+086db3b,2019-05-08 14:44:35 -0400,Create CODE_OF_CONDUCT.md
+3f34a1f,2019-05-08 14:42:37 -0400,Merge pull request #2 from OpenWaterAnalytics/dev
+52bda22,2019-05-08 16:56:23 +0300,Merge pull request #478 from eladsal/473
+6ace843,2019-05-08 09:47:37 -0400,Merge pull request #472 from makusuko/fix-rules-label
+eefc7f7,2019-05-06 11:36:41 +0300,For "conditional" do delete a node connected to a link
+d56601d,2019-05-04 22:03:13 +0300,Merge pull request #476 from Mariosmsk/update_win_build
+6e621bc,2019-05-03 16:12:20 -0400,Merge pull request #1 from OpenWaterAnalytics/dev
+1b3141a,2019-05-03 10:39:06 +0300,Merge branch 'fix-rules-label' of https://github.com/makusuko/EPANET into fix-rules-label
+1aef998,2019-05-02 16:35:55 +0300,Fixed NULL pointer error, if no label is provided after the rule keyword. Add NULL guard in freerules function. Use strncat and strncpy to ensure the buffer lengths are adhered to.
+d3e989b,2017-06-28 12:13:44 -0400,Create LICENSE
+d34748e,2019-05-02 20:56:38 +0300,Create Makefile2.bat
+5d687d7,2019-05-02 16:35:55 +0300,Fixed NULL pointer error, if no label is provided after the rule keyword.
+61847db,2019-04-25 10:15:01 -0400,Merge pull request #466 from OpenWaterAnalytics/lrossman-dev
+97be794,2019-04-25 08:22:44 -0400,Fix problems with setting tank parameters (issue #464 )
+59bd09c,2019-04-24 18:57:46 -0400,Merge pull request #465 from michaeltryby/dev-list
+35cf9bd,2019-04-24 18:40:47 -0400,Fix bug and test remove demand
+dc3c2ff,2019-04-24 16:30:27 -0400,Adding remove demand method to toolkit
+d927851,2019-04-24 16:29:57 -0400,Adding remove node method to generic list
+9b3173f,2019-04-24 13:15:43 -0400,Adding key and search to list
+cf97cf8,2019-04-23 17:52:11 -0400,Work in progress
+9008133,2019-04-23 14:44:11 -0400,Update demand.c
+feee7f2,2019-04-23 14:42:37 -0400,Update epanet.c
+5d3eeb9,2019-04-23 11:44:02 -0400,Reverted handling of default pattern
+73bc53a,2019-04-23 08:51:22 -0400,Update demand.c
+4f9c901,2019-04-23 08:44:53 -0400,Merge branch 'dev-list' of https://github.com/michaeltryby/EPANET into dev-list
+a0048b7,2019-04-22 13:37:41 -0400,Update test_demand_data.cpp
+f19d43d,2019-04-22 13:36:44 -0400,Merge branch 'dev' of https://github.com/OpenWaterAnalytics/EPANET into dev-list
+ce70d14,2019-04-22 13:13:38 -0400,Restoring write_demands section in saveinpfile
+60853ec,2019-04-22 13:08:43 -0400,Update demand.c
+c98a43e,2019-04-22 12:47:52 -0400,Isolating bug
+ca097a9,2019-04-22 12:22:15 -0400,Update test_project.cpp
+d34ac67,2019-04-22 12:14:33 -0400,updating get demand name and write demands
+97f70e4,2019-04-22 11:07:01 -0400,Update epanet.c
+b80b4ed,2019-04-22 10:52:04 -0400,Update inpfile.c
+1524ade,2019-04-20 21:38:01 -0400,Merge pull request #463 from OpenWaterAnalytics/lrossman-dev
+d985a69,2019-04-20 11:54:33 -0400,Refactored xstrcpy function
+f05746c,2019-04-19 22:56:08 -0400,GCC Bug
+6a084cc,2019-04-19 22:35:15 -0400,Update inpfile.c
+8761543,2019-04-19 22:24:31 -0400,Working on gcc bug
+17b82bd,2019-04-19 21:59:09 -0400,Fixing bug
+e2e12fa,2019-04-19 21:51:55 -0400,Cleaning up gcc build
+405822c,2019-04-19 21:34:25 -0400,Cleaning up build on gcc
+e9650d2,2019-04-19 21:21:58 -0400,Work in progress
+7537be1,2019-04-19 18:01:06 -0400,Work in progress
+ebb271c,2019-04-19 11:03:09 -0400,Merge pull request #461 from OpenWaterAnalytics/lrossman-dev
+55a28de,2019-04-18 17:34:02 -0400,Work in progress
+a4ac34d,2019-04-18 17:12:56 -0400,Updated criteria for valid object ID name
+76b6254,2019-04-18 17:07:50 -0400,get/set demand name are passing
+901a802,2019-04-18 16:16:02 -0400,Passing open and close test
+bf519fd,2019-04-18 14:24:30 -0400,Work in progress
+4581266,2019-04-18 13:46:18 -0400,test demand data passing
+584233e,2019-04-18 09:54:56 -0400,Create test_demand_data.cpp
+6b0e421,2019-04-18 07:39:39 -0400,Update test_node.cpp
+cc22eef,2019-04-18 07:11:17 -0400,Fixed compilation errors
+1583bea,2019-04-18 07:00:07 -0400,Return object index from EN_addnode and EN_addlink (issue #432)
+3cc9c95,2019-04-17 17:25:09 -0400,Update demand.c
+109276e,2019-04-17 17:24:34 -0400,Work in progress
+ff21a33,2019-04-17 10:53:08 -0400,Merge branch 'dev' of https://github.com/OpenWaterAnalytics/EPANET into dev-list
+4494db8,2019-04-17 09:58:22 -0400,Merge pull request #459 from michaeltryby/dev
+d1979e7,2019-04-17 09:39:24 -0400,Update errror code from 250 to 252
+f161eca,2019-04-16 17:40:40 -0400,Fixing build warnings on gcc
+3186ec3,2019-04-16 17:29:32 -0400,Adding element id validity check
+22a7993,2019-04-16 16:57:38 -0400,Adding element id validity checks
+ea8e043,2019-04-16 16:06:44 -0400,Update test_cstrhelper.cpp
+9224ac4,2019-04-16 15:54:50 -0400,Update cstr_helper.c
+2d74851,2019-04-16 15:54:12 -0400,Update cstr_helper.c
+02ec735,2019-04-16 15:51:19 -0400,Work in progress
+ac56971,2019-04-16 14:44:06 -0400,Work in progress
+c659c70,2019-04-15 13:35:37 -0400,Work in progress
+f80e74b,2019-04-12 18:07:32 -0400,Update demand.h
+880bdff,2019-04-12 18:00:36 -0400,Work in progress
+8989be1,2019-04-12 16:17:53 -0400,Merge pull request #457 from michaeltryby/dev
+3fb5ba5,2019-04-12 15:29:50 -0400,Fixing compilation bug on gcc
+ce12b22,2019-04-12 15:22:38 -0400,Updating unit tests
+2404493,2019-04-12 14:21:00 -0400,Merge pull request #454 from michaeltryby/dev-list
+9c4665a,2019-04-11 18:04:20 -0400,Fixes memory leak in EN_addnode() (#455)
+60fd6fa,2019-04-11 14:48:35 -0400,Update CMakeLists.txt
+7e83d2c,2019-04-11 14:37:13 -0400,Fixing bug on gcc
+a81a8f4,2019-04-11 14:31:21 -0400,Fixing bug
+57a5f6f,2019-04-11 14:28:43 -0400,Update test_list.cpp
+d79c766,2019-04-11 14:10:57 -0400,Update test_list.cpp
+3f37fdb,2019-04-11 10:45:22 -0400,Refactoring head_list and tail_list
+af87edb,2019-04-11 09:48:43 -0400,Update list.c
+a7f8fc8,2019-04-11 09:44:08 -0400,Reorganized to contain list abstraction
+f10e363,2019-04-10 17:59:55 -0400,Work in progress
+6187bc1,2019-04-10 16:17:36 -0400,Fixing indent
+669bdde,2019-04-10 16:12:13 -0400,Expanding test
+06a90fd,2019-04-10 11:34:37 -0400,Update test_list.cpp
+7d3c16a,2019-04-10 11:26:36 -0400,Update list.c
+fbecf1b,2019-04-10 11:25:01 -0400,Fixing indent
+dba0d1c,2019-04-10 11:15:35 -0400,Update test_list.cpp
+3d62254,2019-04-10 11:11:13 -0400,Update list.c
+6537b4f,2019-04-10 11:03:23 -0400,Updating file headers
+f9dd9bc,2019-04-10 10:57:55 -0400,Clean up and inline comments
+ea02e17,2019-04-10 10:44:34 -0400,Fixed memory leak
+39038bc,2019-04-09 18:17:15 -0400,Fixing indentation
+07995be,2019-04-09 18:09:41 -0400,Fixing bug in head_list
+1fdee6a,2019-04-09 16:16:54 -0400,Fix typo
+dcfa51f,2019-04-09 16:09:37 -0400,Update list.h
+6f236f0,2019-04-09 15:16:54 -0400,Update test_list.cpp
+30f0def,2019-04-09 14:26:33 -0400,Initial commit list
+8b4727e,2019-04-08 16:26:33 -0400,Merge pull request #431 from Mariosmsk/fix_bug_getdemandname
+700110c,2019-04-08 23:17:01 +0300,Merge pull request #1 from michaeltryby/Mariosmsk-fix_bug_getdemandname
+a6e0337,2019-04-08 15:38:37 -0400,Merge branch 'dev' of https://github.com/OpenWaterAnalytics/EPANET into Mariosmsk-fix_bug_getdemandname
+a72e2dc,2019-04-08 15:36:56 -0400,Merge pull request #451 from OpenWaterAnalytics/lrossman-dev
+cf1fc43,2019-04-08 15:22:16 -0400,Merge branch 'dev' of https://github.com/OpenWaterAnalytics/EPANET into Mariosmsk-fix_bug_getdemandname
+14af368,2019-04-08 14:44:05 -0400,Merge branch 'fix_bug_getdemandname' of https://github.com/Mariosmsk/EPANET into Mariosmsk-fix_bug_getdemandname
+04a6ece,2019-04-08 14:07:00 -0400,Added new reg tests
+d436b23,2019-04-08 13:40:17 -0400,Triggering build to update benchmarks
+b844323,2019-04-08 11:16:23 -0400,Bug fix for 2Comp and LIFO tank mixing models (issue #448)
+1f67c8c,2019-04-08 11:08:34 -0400,Merge pull request #450 from OpenWaterAnalytics/lrossman-dev
+b2a8b55,2019-04-05 16:28:55 -0400,Update input2.c
+edcd4b6,2019-04-05 13:02:39 -0400,Eliminates use of temporary linked lists to process Patterns & Curves (issue #449)
+b87c102,2019-04-04 10:23:01 -0400,Merge pull request #447 from OpenWaterAnalytics/lrossman-dev
+1632508,2019-04-03 21:23:46 -0400,Fixed epanet2_enums.h
+3e733f5,2019-04-03 21:17:28 -0400,Add more analysis options to the API (issue #425)
+f63df92,2019-04-03 16:58:12 -0400,Merge pull request #445 from michaeltryby/dev-unittesting
+927cf97,2019-04-03 16:40:58 -0400,merging upstream dev
+9f867b1,2019-04-03 16:35:47 -0400,Merge pull request #443 from OpenWaterAnalytics/lrossman-dev17
+502e5f1,2019-04-03 16:25:51 -0400,Fixing index error in test
+84bf6f9,2019-04-03 15:55:23 -0400,Cleaning up include statements adding crtdbg.h
+be2b0a3,2019-04-03 14:56:01 -0400,Update CMakeLists.txt
+b578380,2019-04-03 14:13:40 -0400,Update test_toolkit.hpp
+efd86c3,2019-04-03 14:05:41 -0400,Fixing memory problems with test_toolkit
+f99d417,2019-04-03 11:10:52 -0400,Merge branch 'dev' of https://github.com/OpenWaterAnalytics/EPANET into dev-unittesting
+568f89f,2019-04-03 11:10:36 -0400,removing reference to strncpy
+0f7c075,2019-04-03 10:58:46 -0400,Merge pull request #444 from michaeltryby/dev
+fa4952a,2019-04-03 10:56:24 -0400,Fixed failure to update test_analysis.cpp
+af82500,2019-04-03 10:43:19 -0400,Fixed failure to update test_net_builder.cpp
+9da7e9a,2019-04-03 10:29:10 -0400,Cleaning up build on gcc
+83ffc1c,2019-04-03 10:25:37 -0400,Removed the EN_DEFDEMANDPAT option
+513b545,2019-04-03 09:34:32 -0400,Merge pull request #442 from OpenWaterAnalytics/lrossman-dev17
+207cc53,2019-04-03 09:27:51 -0400,Cleaning up build on gcc
+23b11ab,2019-04-03 01:15:57 -0400,Add test of EN_setcurve & EN_getcurve to test_curve.cpp
+ca0ea0e,2019-04-03 00:58:40 -0400,Fixes bug in EN_getcurve
+8b35866,2019-04-02 22:36:08 -0400,Merge pull request #441 from OpenWaterAnalytics/lrossman-dev17
+6a4b95f,2019-04-02 22:21:05 -0400,Bug fixes
+77851dc,2019-04-02 17:31:39 -0400,Merge pull request #440 from michaeltryby/dev
+db85975,2019-04-02 17:28:48 -0400,Fixing header comments
+2f6d130,2019-04-02 17:11:38 -0400,Merge pull request #439 from michaeltryby/dev-filemanager
+0e30d57,2019-04-02 17:01:35 -0400,Update errormanager
+ea5d289,2019-04-02 16:51:55 -0400,Bumping version, updating headers
+525c861,2019-04-02 16:16:53 -0400,Update appveyor.yml
+90325d7,2019-04-02 16:14:28 -0400,Update appveyor.yml
+611afba,2019-04-02 15:58:16 -0400,Update .travis.yml
+ddf0a08,2019-04-02 15:47:06 -0400,revert 1a01b46
+3ba4001,2019-04-02 15:41:24 -0400,revert 8574f52
+9077605,2019-04-02 15:34:21 -0400,Reorganizing public functions
+ecf0e51,2019-04-02 15:27:05 -0400,revert  1a01b46 to 1b167b5
+44fc73c,2019-04-02 14:37:32 -0400,Fixing bug
+3828ebb,2019-04-02 13:48:38 -0400,updating cstr_helper to use secure string functions
+a89f3c9,2019-04-02 12:31:05 -0400,Making sure filename is null terminated string
+c98d13d,2019-04-02 11:05:56 -0400,Updated filemanager to use dynamically allocated strings
+2c6d4ca,2019-04-01 18:05:02 -0400,Work in progress
+a0b0892,2019-04-01 15:24:52 -0400,Tweaking header doc
+36a12cd,2019-04-01 15:23:13 -0400,Adding test_filemanager to ctest
+b9f0042,2019-04-01 15:16:58 -0400,Adding header info
+23ac179,2019-04-01 15:03:02 -0400,Implementing filemanager
+69da9a4,2019-03-29 17:04:55 -0400,Work in progress
+d1df792,2019-03-28 17:39:05 -0400,Adding remove_file()
+727ede3,2019-03-28 17:28:02 -0400,Initial commit
+1b167b5,2019-03-28 09:26:26 -0400,Cleaning up include statements
+bd8a21d,2019-03-27 22:02:34 +0200,Update test_demand.cpp
+8574f52,2019-03-26 16:48:08 -0400,Fixing indentation
+d4d876d,2019-03-26 15:51:09 -0400,Update appveyor.yml
+44bea58,2019-03-26 15:18:54 -0400,Fixing bug in appveyor.yml
+1a01b46,2019-03-26 14:57:41 -0400,Adding build configuration
+8ca4f47,2019-03-26 13:31:39 -0400,Merge pull request #433 from michaeltryby/dev
+27bf153,2019-03-26 13:09:09 -0400,Updating py API with changes to errormanager
+73f8499,2019-03-26 17:29:25 +0200,Update input1.c
+08799eb,2019-03-26 17:19:08 +0200,updates
+8c5e383,2019-03-26 17:06:32 +0200,Revert "Update epanet2_2.h"
+060ca24,2019-03-26 12:40:18 +0200,Update epanet2_2.h
+abf583d,2019-03-25 18:39:57 +0200,try to fix bug in EN_getdemandname
+c90157a,2019-03-22 15:50:48 -0400,Merge pull request #428 from michaeltryby/dev
+1e7cba1,2019-03-22 15:35:35 -0400,Delete test_comments.cpp
+df4e62b,2019-03-22 15:34:34 -0400,Adding comment test
+b02f1ef,2019-03-22 14:10:41 -0400,Merge branch 'dev' of https://github.com/OpenWaterAnalytics/EPANET into dev
+4493891,2019-03-22 11:59:59 -0400,Rolling back option to BUILD_TESTS
+2bf3be4,2019-03-22 11:51:08 -0400,Adding tests at test root
+ec72db5,2019-03-22 11:08:54 -0400,pulling up call to find_packages
+c990362,2019-03-22 09:55:34 -0400,Fine tuning linking strategy
+84341c3,2019-03-22 09:20:33 -0400,Switching MSVC to static link
+66c274c,2019-03-22 09:14:26 -0400,Adding BOOST_TEST_MAIN for gcc build
+82055f2,2019-03-21 18:34:01 -0400,Updating CI scripts
+eb4ae7f,2019-03-21 18:19:17 -0400,Adding boost system for gcc build
+48facd8,2019-03-21 18:08:05 -0400,Fixing test build on gcc
+0c56df4,2019-03-21 13:44:31 -0400,Reorganizing tests
+5687c63,2019-03-21 13:11:10 -0400,Reorganizing unit tests
+80ce382,2019-03-20 18:01:11 -0400,Removing epanet-output from tools folder
+ccbb422,2019-03-20 17:58:24 -0400,Reorganizing src and test folders
+7eadbc2,2019-03-20 15:43:27 -0400,Adding unit test and refactoring
+34705d4,2019-03-20 09:13:15 -0400,Merge pull request #423 from OpenWaterAnalytics/lrossman-dev15
+01eb164,2019-03-19 15:46:59 -0400,Merge pull request #424 from michaeltryby/dev
+260bdef,2019-03-19 14:10:29 -0400,Update test_net_builder.cpp
+a566f91,2019-03-19 13:50:39 -0400,Eliminating build warnings on gcc
+29cfe43,2019-03-19 13:27:07 -0400,Cleaning up tests
+ed9a897,2019-03-18 16:06:21 -0400,Reorganizing tests to improve build performance
+18f65eb,2019-03-17 19:54:51 -0400,Replace fixed-sized comment strings with dynamic strings
+c267753,2019-03-15 19:18:50 -0400,Merge pull request #420 from michaeltryby/dev
+592e4c6,2019-03-15 17:27:02 -0400,Merge remote-tracking branch 'upstream/dev' into dev
+e70ce35,2019-03-15 17:25:59 -0400,Cleaning up tests
+9399ef4,2019-03-13 10:28:55 -0400,Merge pull request #414 from LRossman/lrossman-dev14
+d61a1aa,2019-03-12 15:07:52 -0400,Minor cleanup
+3209183,2019-03-12 13:35:24 -0400,Adding test for EN_getnodevalue
+3f91ab1,2019-03-12 09:52:30 -0400,Merge pull request #417 from michaeltryby/dev
+b86b150,2019-03-12 08:41:06 -0400,Improving error handling in before_test.cmd
+3ba8d93,2019-03-11 17:50:59 -0400,Merge pull request #416 from michaeltryby/dev
+516ae49,2019-03-11 17:11:47 -0400,Changing DLLEXPORT to EXPORT_OUT_API and creating epanet_output_enums.h
+03f41d5,2019-03-09 10:52:59 -0500,Set InFile to NULL after closing it
+724bac7,2019-03-08 18:16:28 -0500,Merge remote-tracking branch 'upstream/dev' into dev
+0b76cfb,2019-03-08 18:15:47 -0500,Adding test for EN_getnodevalue
+e5ec4ee,2019-03-08 16:41:12 -0500,Fixes writing auxiliary data for deleted elements to a saved input file (#411)
+9cff845,2019-03-08 14:09:53 -0500,Adding test for output file access prior to project close
+d238670,2019-03-08 13:09:33 -0500,Merge pull request #410 from makusuko/dev
+7521fe2,2019-03-08 10:10:00 -0500,Merge pull request #413 from michaeltryby/dev
+fbbffb3,2019-03-08 09:51:38 -0500,Renaming rprt_getcount to proj_getcount
+da60bc4,2019-03-07 19:26:17 -0500,Merge pull request #412 from michaeltryby/dev
+a8bcc89,2019-03-07 15:52:43 -0500,Merge remote-tracking branch 'upstream/dev' into dev
+fafa223,2019-03-07 15:41:54 -0500,Fixing call to gen-config
+4f23a03,2019-03-07 12:42:29 -0500,Fancy grep regex
+2ef4241,2019-03-07 11:35:48 -0500,Adding exit conditions
+8d1b490,2019-03-07 11:03:41 -0500,Shellchecked script and eliminated redirect
+93363dc,2019-03-07 10:29:27 -0500,Quoting the URLs
+13160e1,2019-03-07 10:17:09 -0500,Quoting the command
+9f78cd1,2019-03-07 09:40:17 -0500,Updating method for getting latest tag
+d063351,2019-03-07 08:40:37 -0500,Testing curl call
+fbaf2d7,2019-03-07 08:31:30 -0500,Testing jq install
+5d10728,2019-03-07 08:21:17 -0500,Fixing call to determine latest git tag
+78abe70,2019-03-07 11:03:01 +0200,Fix re-entrancy problems caused by the (unnecessary) use of static variables in functions. While at it, mark most of functions static, as they are not used outside the module.
+9b95dc4,2019-03-06 17:43:44 -0500,Merge pull request #401 from michaeltryby/dev
+cd38265,2019-03-06 13:48:58 -0500,Merge pull request #408 from LRossman/lrossman-13
+12c64b6,2019-03-06 13:23:55 -0500,Refactored EN_close function to use newly added closeoutfile function
+6e13d7e,2019-03-06 11:14:03 -0500,Refactoring how the binary output is closed
+3ebb183,2019-03-06 10:44:03 -0500,Another attempt to fix closing/opening of output project
+8765dfa,2019-03-05 20:50:34 -0500,Initialize all file pointers to NULL in initpointers
+324487b,2019-03-05 19:40:30 -0500,Opening & closing output file in writeresults
+09d6c7e,2019-03-05 19:07:55 -0500,Reverting some previous changes
+da23f25,2019-03-05 17:45:27 -0500,Tweaking comments
+306c54f,2019-03-05 17:43:54 -0500,Redirecting 7z output to nul
+12bbeb4,2019-03-05 17:24:14 -0500,Adding jq to install and adding error handling on curl call
+f33257f,2019-03-05 16:48:35 -0500,Trouble shooting error handling
+f3ad69d,2019-03-05 16:24:17 -0500,Improving error handling
+f2c0718,2019-03-05 16:15:33 -0500,Refactored closing/opening of output file
+e1067bd,2019-03-05 15:56:50 -0500,Adding platform and sut_build_id to travis
+8052ed0,2019-03-05 15:20:37 -0500,Walking back closing/opening output file
+2f82dee,2019-03-05 15:03:03 -0500,Adding SUT_BUILD_ID to Travis
+8110948,2019-03-05 14:50:27 -0500,Updating Travis CI
+3c00e8e,2019-03-05 14:49:42 -0500,Updating Travis CI to use new build scripts
+651585f,2019-03-05 14:21:26 -0500,Eliminating ref_build_id as required argument on run-nrtest scripts
+692955e,2019-03-05 09:23:49 -0500,Give external apps access to binary output file (#407)
+b0a0014,2019-03-05 09:04:38 -0500,Merge pull request #406 from LRossman/lrossman-dev4
+d3e9c11,2019-03-04 17:42:37 -0500,Improving bash scripts for running reg tests
+65a6c84,2019-03-02 12:26:49 -0500,Change ENgetcoords & ENsetcoords args. to doubles
+73a6c1c,2019-03-01 17:55:45 -0500,Separating header for test_output
+4bbf4e2,2019-03-01 16:41:03 -0500,Adding include paths for tests build
+b558234,2019-03-01 16:05:03 -0500,Moving fixture from output test to shared header. Fixing build
+9f1b46b,2019-03-01 15:16:27 -0500,Fixing bug in gettimeparam
+fca0df7,2019-03-01 14:14:09 -0500,Moving custom testing predicates to shared header
+b3a9701,2019-03-01 12:12:10 -0500,Adding test for getoption
+612c898,2019-03-01 11:45:39 -0500,Renaming files, adding test for getstatistics
+07dfac6,2019-03-01 10:45:50 -0500,Adding test for stepQ and proj save/reopen
+41f8103,2019-02-28 17:49:40 -0500,Fixing windows bulid
+8640c86,2019-02-28 17:31:16 -0500,Including pthread in build
+0d30d2c,2019-02-28 17:12:22 -0500,including boost system in build
+b248e18,2019-02-28 16:58:33 -0500,Fixing bug
+854168d,2019-02-28 16:51:20 -0500,Fixing bug
+3c25d7d,2019-02-28 16:45:01 -0500,Upgrading to boost1.67
+f8f95a4,2019-02-28 16:17:14 -0500,Working on depends on decorator
+37be05f,2019-02-28 16:03:55 -0500,setting cmake compiler
+dbc127b,2019-02-28 15:52:04 -0500,Upgrading to gcc 7 on Travis build worker
+a626ef9,2019-02-28 11:35:12 -0500,Adding test for saveH
+a4b2e53,2019-02-28 11:14:15 -0500,Adding tests for save and use hydraulics file
+91120b8,2019-02-28 10:12:25 -0500,Creating header for sharing fixtures, reorganizing tests
+97ae763,2019-02-28 09:17:16 -0500,Moving getcount in epanet.py and adding test
+c7d533c,2019-02-28 08:11:59 -0500,Adding tests for gettitle and saveinpfile
+ab536d1,2019-02-26 16:13:14 -0500,Merge remote-tracking branch 'upstream/dev' into dev
+6713d84,2019-02-26 15:00:18 -0500,Merge pull request #400 from michaeltryby/dev-64bit
+d031d68,2019-02-26 14:48:39 -0500,Updating REF_BUILD_ID for 64-bit
+08a8407,2019-02-26 14:29:57 -0500,Getting 64 bit reg tests to run
+b403814,2019-02-26 13:42:42 -0500,Tweaking in line comments
+5b244da,2019-02-26 10:36:26 -0500,Separating 32 and 64 bit builds
+ce6d9f3,2019-02-25 18:31:41 -0500,Merge pull request #399 from michaeltryby/dev
+e720d4b,2019-02-25 17:32:56 -0500,Updating receipt location
+40ada01,2019-02-25 17:03:11 -0500,Improving reg testing helper scripts
+15c208f,2019-02-25 16:21:29 -0500,Merge remote-tracking branch 'upstream/dev' into dev
+382572e,2019-02-22 15:15:59 -0500,Merge pull request #395 from LRossman/lrossman-dev2
+fcbbbf9,2019-02-20 12:43:32 -0500,Adds new pattern, curve and reporting functions to API
+9377e67,2019-02-12 16:36:55 -0500,Updating file path in benchmark archive
+aef6e29,2019-02-12 15:40:04 -0500,Merge pull request #392 from michaeltryby/dev
+72573d1,2019-02-12 15:32:39 -0500,Fix EXE_HOME
+874dfa9,2019-02-12 15:16:54 -0500,Add search for SUT exe location
+77f96a2,2019-02-12 13:51:35 -0500,Updating inline comments
+3127e2c,2019-02-12 13:38:45 -0500,Merge pull request #391 from michaeltryby/dev
+75cefb9,2019-02-12 13:32:24 -0500,Fixing typo
+1620f3f,2019-02-12 13:21:55 -0500,updating documentation
+678a2c2,2019-02-12 13:13:35 -0500,Introducing default arguments
+d33afdd,2019-02-12 11:26:12 -0500,Applying default arguments
+03de014,2019-02-11 16:54:21 -0500,Merge remote-tracking branch 'upstream/dev' into dev
+56d1fe2,2019-02-11 16:22:15 -0500,Merge pull request #390 from michaeltryby/dev
+219e3ab,2019-02-11 16:18:22 -0500,Merge pull request #389 from LRossman/lrossman-dev1
+02756af,2019-02-11 15:58:54 -0500,Merge remote-tracking branch 'upstream/dev' into dev
+f4ea0a6,2019-02-11 15:51:40 -0500,Running all tests
+38f1e77,2019-02-11 15:44:56 -0500,Merge remote-tracking branch 'origin/dev' into dev
+3e8e1c6,2019-02-11 15:44:26 -0500,Updating Travis to run coverage for reg tests
+799874d,2019-02-11 15:43:53 -0500,Adding options and usage to run-nrtest.sh
+3eb9a68,2019-02-11 14:30:15 -0500,Fixes win_build and VS/cmake build problems
+d6d244d,2019-02-10 22:55:54 -0500,Merge pull request #386 from LRossman/lrossman-dev
+339e37b,2019-02-09 17:07:14 -0500,Merge pull request #387 from michaeltryby/dev
+6ec7a70,2019-02-09 17:06:33 -0500,Updating codecov badge
+996e261,2019-02-08 19:06:42 -0500,Updates documentation with newly added functions
+60f1e5e,2019-02-08 16:52:07 -0500,Rolling back coveralls going with codecov
+f8a397b,2019-02-08 16:30:40 -0500,Trying codecov
+847da68,2019-02-08 15:29:01 -0500,Messing with excludes
+2c86a8f,2019-02-08 15:27:52 -0500,Fixes the win_build Makefile.bat file
+09cbe57,2019-02-08 15:19:04 -0500,Messing with excludes
+c6642a2,2019-02-08 15:12:17 -0500,Merge pull request #2 from michaeltryby/dev-coverage
+26266c3,2019-02-08 15:00:19 -0500,excluding project dirs from coverage
+1531b29,2019-02-08 14:37:41 -0500,Configuring coveralls
+eae80cb,2019-02-08 14:31:16 -0500,Configuring Travis for coverage
+4af84f5,2019-02-08 14:14:59 -0500,Adding encrypted coveralls repo token
+cc7f9f1,2019-02-08 13:18:06 -0500,Setting up Travis working for coverage
+bacbac3,2019-02-08 13:03:07 -0500,Merge remote-tracking branch 'upstream/dev' into dev
+36b78f2,2019-02-08 12:07:56 -0500,New function `clearreport` added (see issue #383)
+140c952,2019-02-07 22:13:40 +0200,Merge pull request #385 from eladsal/dev-title
+8a7277e,2019-02-07 11:34:18 -0500,Adding build option for coverage
+ab62d3b,2019-02-06 11:45:48 +0200,Add new function to get and set title strings
+a845f6a,2019-02-05 14:42:19 -0500,Merge remote-tracking branch 'upstream/dev' into dev
+3c5ce9a,2019-02-05 10:54:52 -0500,Merge pull request #384 from michaeltryby/dev
+6a0151b,2019-02-04 14:28:32 -0500,Adding support for custom epanet_py build target
+a16cc7c,2019-02-01 11:45:34 -0500,Merge branch 'dev' into feature-64bit
+7c89abe,2019-02-01 11:41:19 -0500,Merge remote-tracking branch 'upstream/dev' into dev
+8275a62,2019-01-31 15:30:38 -0500,Merge pull request #380 from michaeltryby/dev-swig-redux
+cba9dda,2019-01-30 14:30:44 -0500,Fixing build error gcc / Travis
+d62d606,2019-01-30 13:36:04 -0500,Removing *.orig file
+8dd917d,2019-01-30 13:35:24 -0500,Adding *.orig to .gitignore
+7256508,2019-01-30 13:29:48 -0500,Merge remote-tracking branch 'upstream/dev' into dev-swig-redux
+bdbd23e,2019-01-30 19:47:32 +0200,Merge pull request #377 from Mariosmsk/patch-1
+ba8926e,2019-01-29 19:17:41 -0500,Merge pull request #378 from LRossman/lrossman-dev
+5adc02b,2019-01-29 18:50:17 +0200,call ENnextH before ENnextQ
+67947e5,2019-01-29 09:46:14 -0500,Minor edits to documentation
+8d12664,2019-01-28 11:31:31 -0500,Removing EN_API_FLOAT_TYPE
+b339ff2,2019-01-28 11:23:25 -0500,Merging dev into dev-swig-redux
+30c9843,2019-01-28 10:41:23 -0500,Merge remote-tracking branch 'upstream/dev' into dev-swig-redux
+7fc2a3b,2019-01-28 10:26:44 -0500,Merge remote-tracking branch 'upstream/dev' into dev
+d5e467f,2019-01-28 17:25:21 +0200,Update ReleaseNotes2_1.md
+c877730,2019-01-28 17:24:07 +0200,added the ENopenQ; in example code
+3b6b0d9,2019-01-25 15:38:25 -0500,Merge pull request #374 from LRossman/lrossman-dev
+821d134,2019-01-24 10:51:37 -0500,Replaced the Doxygen files in the doc folder (issue #373)
+2626ab9,2019-01-22 10:50:07 -0500,Merge pull request #372 from LRossman/lrossman-dev
+0cfa45e,2019-01-19 16:56:19 -0500,New updates to address compiler warnings (issue #370)
+414db4d,2019-01-16 09:20:34 -0500,Merge pull request #369 from LRossman/lrossman-dev
+f673aa2,2019-01-11 12:52:09 -0500,Modifications made to EN_getlinkvalue & EN_setlinkvalue in EPANET.C
+23e542a,2019-01-10 08:39:49 +0200,Mark VB reserved words in variable names
+dd37669,2019-01-09 15:14:10 -0500,Floating pt. args in thread-safe API changed to doubles (Issue #365)
+15bc012,2019-01-04 12:20:52 -0500,Merge pull request #368 from LRossman/lrossman-dev
+baa7ba9,2019-01-02 11:04:34 -0500,Update ReleaseNotes2_2.md
+628fffc,2019-01-02 10:33:58 -0500,Added additional network building features (#367)
+9464465,2018-12-21 10:40:17 -0500,Merge pull request #363 from LRossman/lrossman-dev
+3ce0361,2018-12-20 08:36:05 -0500,Network validity checks added to openhyd()
+a66f5a2,2018-12-18 15:35:06 -0500,Checks addded to prevent changing network structure when solver active (#361)
+311871b,2018-12-17 13:13:08 -0500,Merge pull request #360 from LRossman/lrossman-dev
+fed58fd,2018-12-17 12:14:08 -0500,Updating benchmark version
+f1175b1,2018-12-15 15:13:19 -0500,Error reporting fixes and re-formatting (issue #358)
+9d83955,2018-12-10 17:32:13 -0500,Deleting test_epanet_py
+186c17b,2018-12-10 17:30:47 -0500,Adding file headers
+9e3ecbd,2018-12-10 17:17:11 -0500,Merge remote-tracking branch 'upstream/dev' into dev-swig-redux
+51795d8,2018-12-10 15:53:38 -0500,Adding API for simple and rule based controls
+fca9c42,2018-12-07 16:23:12 -0500,Fixing arg as return with enum type
+4e3b96e,2018-12-07 16:15:54 -0500,Merge pull request #356 from LRossman/lrossman-dev
+6783b68,2018-12-07 11:41:37 -0500,Set main() to return 100, not errmsg, if run has fatal error
+e2ee456,2018-12-07 09:46:15 -0500,Return 0 from main.c if run has warnings
+d5de19c,2018-12-06 17:48:32 -0500,Ongoing dev
+fa80bec,2018-12-06 11:40:59 -0500,Included error number as part of error message (issue #357)
+0930a64,2018-12-06 11:11:41 -0500,Re-write of main.c
+5f2cd40,2018-12-06 10:56:08 -0500,Merge pull request #354 from LRossman/lrossman-dev
+c1adfd5,2018-12-04 17:54:39 -0500,Fleshing out api for swig wrap
+107483b,2018-12-04 09:50:01 -0500,Avoid possible divide by zero in hydcoeffs.c
+b63f232,2018-11-30 15:49:28 -0500,Initial commit interface for python wrap
+9ed3462,2018-11-30 12:00:07 -0500,Ignoring nrtestsuite/ and tests/data
+98cb6b4,2018-11-30 09:38:04 -0500,Merge pull request #353 from michaeltryby/dev
+76a9dd9,2018-11-30 09:08:38 -0500,Fixing file header, adding epanet2.c to winbuild
+b0c7714,2018-11-29 12:51:47 -0500,Keeping legacy api in epanet2.h epanet2.c and moving new api to epanet2_2.h epanet.c
+333e87b,2018-11-29 12:20:13 -0500,Fixing tests
+fef02cd,2018-11-29 12:02:10 -0500,Merging origin dev
+be2ca0a,2018-11-29 11:57:51 -0500,Implmenting Toolkit API versioning
+4831fd7,2018-11-28 19:19:01 -0500,Merge pull request #1 from OpenWaterAnalytics/dev
+9ff0056,2018-11-28 17:26:37 -0500,Merge pull request #350 from LRossman/lrossman-dev
+20bc635,2018-11-28 10:01:29 -0500,Restored previous parallel link detection method to smatrix.c
+d3a50dc,2018-11-27 19:25:01 -0500,Fixed refactoring bug in EN_setlinkid
+b7a7cdc,2018-11-27 16:45:13 -0500,Another update to test_setid.cpp
+7c21b9c,2018-11-27 16:10:39 -0500,Update test_setid.cpp
+24d90a5,2018-11-27 15:16:12 -0500,Replaced EN_ProjectHandle with EN_Project in unit tests
+9a540cc,2018-11-27 14:22:06 -0500,Code cleanup
+2988800,2018-11-19 17:05:49 -0500,Merge pull request #348 from michaeltryby/dev
+a611832,2018-11-19 16:51:39 -0500,Fixing build error
+ad4969e,2018-11-19 16:40:40 -0500,Rolling back errormanager
+440230e,2018-11-19 16:33:30 -0500,Rolling back errormanager
+25a4d93,2018-11-16 16:39:09 -0500,Merge pull request #341 from michaeltryby/dev
+b34c2ed,2018-11-16 14:06:29 -0500,Fixing build error on Travis
+a4c9973,2018-11-16 13:49:45 -0500,Adding test_save_reopen, minor refactoring.
+db3f2f1,2018-11-10 07:47:20 +0200,Merge pull request #337 from Mariosmsk/update_realeasenotes_2_2
+9444646,2018-11-09 17:15:53 +0200,update api functions/extensions
+123a0c3,2018-11-09 09:48:28 -0500,Merge pull request #335 from LRossman/lrossman-dev
+36972c2,2018-11-08 10:09:35 +0200,Fix for VB header file
+d10649c,2018-11-08 09:45:10 +0200,Minor fix to the DEF file
+ca92770,2018-11-08 09:36:33 +0200,Small fix for DEF file
+6397a01,2018-11-07 23:19:16 -0500,Merge branch 'dev' into lrossman-dev
+7443cea,2018-11-07 23:09:47 -0500,Fixes #172 (adjust controls when node/link is deleted) & EN_addrule added
+bdd67a9,2018-11-05 12:28:43 -0500,Merge pull request #332 from michaeltryby/dev
+bfec6d6,2018-11-05 10:12:24 -0500,Merging upstream dev
+5f0ca80,2018-11-05 10:05:30 -0500,Fixing bug in check_cdd
+18fb352,2018-10-31 18:23:03 +0200,Merge pull request #327 from eladsal/dev-link-nodes
+de6d22a,2018-10-31 11:47:33 -0400,Merge pull request #329 from LRossman/lrossman-dev
+ee335ab,2018-10-31 11:32:01 -0400,Fixes bug #172 (adjust controls & rules when node/link added or deleted)
+3ac243d,2018-10-29 12:04:41 -0400,Merge pull request #328 from LRossman/lrossman-dev
+5ddb54a,2018-10-29 11:44:25 -0400,Deleted include\epanet_export.h
+4394c53,2018-10-29 17:20:45 +0200,Add ENsetlinknodes to DEF file and add a function check
+1234c7e,2018-10-29 09:12:12 -0400,Merge pull request #326 from LRossman/lrossman-dev
+a86ba29,2018-10-29 09:06:08 -0400,Restored epanet_export.h to \include folder
+e32046c,2018-10-29 06:07:04 +0200,Merge pull request #319 from Mariosmsk/Update-ReleaseNotes2_2.md
+8e258c2,2018-10-29 05:58:55 +0200,Merge branch 'dev' into Update-ReleaseNotes2_2.md
+5cb9d06,2018-10-28 20:25:10 -0400,Merge pull request #325 from LRossman/lrossman-dev
+c2b16a6,2018-10-28 20:07:54 -0400,Deleted previous, commented-out version of EN_setlinktype
+291789c,2018-10-28 17:09:41 -0400,Merge pull request #324 from LRossman/lrossman-dev
+8514929,2018-10-28 16:58:43 -0400,Rewrite of EN_setlinktype function (#305)
+7d021d8,2018-10-27 12:04:38 -0400,Merge pull request #322 from LRossman/lrossman-dev
+27cc088,2018-10-27 11:31:06 -0400,Reverted back to old main()
+320dec3,2018-10-27 11:00:00 -0400,Replaced main() for runnable version of the library
+9d0b738,2018-10-27 09:36:21 -0400,Removed writecon function and all calls to it
+8286918,2018-10-27 09:05:30 -0400,Removed unused runconcurrent() function
+e9161ad,2018-10-27 08:48:41 -0400,Defined EN_MAXID & EN_MAXMSG limits in API header
+09e46bc,2018-10-25 12:22:04 -0400,Merge pull request #320 from LRossman/lrossman-dev
+39fcfa2,2018-10-25 09:39:28 -0400,Fixed bug setting pump curve params (#314) and in setting demand categories
+27c21e4,2018-10-25 13:55:03 +0300,Update ReleaseNotes2_2.md
+2ed36c0,2018-10-24 09:02:54 -0400,Merge pull request #315 from LRossman/lrossman-dev
+6938802,2018-10-23 16:00:14 -0400,Fixed bug in EN_deletelink (#312)
+3f90e44,2018-10-23 09:21:02 -0400,Merge pull request #303 from LRossman/dev-lrossman
+f7346ce,2018-10-19 10:36:39 -0400,Modified re-factored version of hash.c
+0041772,2018-10-18 10:16:47 -0400,Corrected test_setid unit test code
+60a79de,2018-10-18 10:03:09 -0400,Fixed bug in hash.c
+b3e84e0,2018-10-17 10:17:00 -0400,Added unit test for ENsetnodeid and ENsetlinkid functions
+76419e0,2018-10-17 09:05:16 -0400,Added EN_setnodeid and EN_setlinkid (Issue #306)
+1fce14e,2018-10-15 11:34:25 -0400,Increased size of MAXMSG to 255 (#189)
+1c3044c,2018-10-14 11:05:15 -0400,Fix #211 for EN_setreport
+d42f191,2018-10-12 09:13:14 -0400,Merge pull request #297 from LRossman/dev-lrossman
+9376017,2018-10-12 08:58:17 -0400,Updateing benchmark
+27863ba,2018-10-11 11:44:20 -0400,Merge pull request #299 from michaeltryby/dev
+e943dd7,2018-10-11 08:02:15 -0400,Saving SUT benchmarks as artifact
+c042502,2018-10-10 18:00:52 -0400,Saving SUT benchmarks as artifact
+570f96b,2018-10-09 15:55:19 -0400,Update src/qualroute.c
+7c021cf,2018-10-09 12:53:20 -0400,Fixed water quality mass balance issue (#160)
+4848f69,2018-10-01 10:47:40 +0300,Merge pull request #296 from eladsal/dev-dem-cat
+75ad505,2018-09-29 10:09:51 +0300,Merge pull request #293 from Mariosmsk/EN_HEADLOSSFORM
+0932ef7,2018-09-26 12:24:11 +0300,Update ReleaseNotes2_2.md
+0b5c5a3,2018-09-26 12:13:49 +0300,Test for set\get demand categories
+c1c80da,2018-09-26 11:15:37 +0300,Add APIs to get\set demand categories names
+1e42b7f,2018-09-25 16:38:51 +0300,Merge pull request #291 from eladsal/dev-dem-cat
+982ff90,2018-09-23 19:41:27 +0300,add option EN_HEADLOSSFORM in function ENgetoption
+fbaf2a6,2018-09-22 11:29:56 +0300,Update release notes
+cc21b55,2018-09-22 11:19:05 +0300,Read and write demand categories names
+054c48c,2018-09-21 17:22:28 +0300,Merge pull request #287 from eladsal/dev-default-pattern
+3afb14a,2018-09-18 16:10:35 -0400,Merge pull request #288 from michaeltryby/dev
+b1bb94f,2018-09-18 16:02:56 -0400,Fixing memory leak
+dad11cc,2018-09-15 14:22:20 +0300,Add option to get\set default demand pattern
+43e5c42,2018-09-14 16:29:03 -0400,Merge pull request #285 from michaeltryby/dev
+aadfb19,2018-09-14 15:59:41 -0400,Reverting ENepanet from runconcurrent() to EN_runproject()
+945280e,2018-09-14 15:51:51 -0400,Fixing bug in geterrmsg()
+5cdb331,2018-09-13 17:03:02 -0400,Merge pull request #282 from LRossman/lrossman-dev
+d164293,2018-09-13 16:48:45 -0400,Triggering appveyor build
+902dac9,2018-09-13 23:22:20 +0300,Merge pull request #278 from eladsal/net-builder-es
+2a86252,2018-09-13 16:20:52 -0400,Updating benchmark
+7e6ceb4,2018-09-13 10:54:11 -0400,Resolving merge conflicts
+bec729a,2018-09-13 10:48:55 -0400,Fixing compiler warnings
+8e96d1e,2018-09-13 17:21:33 +0300,Fixing casting of chars (take 2)
+735811d,2018-09-13 16:17:06 +0300,Revert "Fixing char casting in test file"
+8d5d20f,2018-09-13 15:33:12 +0300,Fixing char casting in test file
+e45a23c,2018-09-12 10:38:01 -0400,More robust method for handling zero/low flows (#164)
+dab7be8,2018-09-11 13:15:15 -0400,Updates to fix zero flow (#164) and D-W eqn. (#199) issues
+836d9c3,2018-09-11 11:04:47 -0400,Revert "Fixes zero flow issue (#164) and DW eqn. (#199)"
+6b808c0,2018-09-11 09:48:01 -0400,Fixes zero flow issue (#164) and DW eqn. (#199)
+7cf8d53,2018-09-06 12:07:14 +0300,Explicitly set demant patterns for junctions
+40a5371,2018-09-06 12:01:09 +0300,Fix EN_setnodevalue for EN_MINLEVEL
+102ac90,2018-09-05 13:56:59 +0300,Adding last test
+d46dd1a,2018-09-05 13:56:18 +0300,Added documentation
+ad3b26d,2018-09-05 09:37:21 +0300,Fail the test...
+8687af3,2018-09-05 09:33:21 +0300,Initial net builder test
+756e8be,2018-09-05 07:42:02 +0300,Merge pull request #265 from eladsal/dev-control
+b7dfc9f,2018-09-04 15:23:31 -0400,Merge pull request #276 from michaeltryby/dev
+c64cc8d,2018-09-04 15:18:16 -0400,Merge branch 'dev' of https://github.com/OpenWaterAnalytics/EPANET into dev
+8059a90,2018-09-04 15:16:40 -0400,Add ENsetdemandpattern
+f6de130,2018-09-04 15:12:03 -0400,Merge pull request #238 from OpenWaterAnalytics/issue-172
+ec6bb25,2018-09-04 15:00:21 -0400,Merge branch 'dev' into issue-172
+4662296,2018-09-04 14:55:42 -0400,Merge pull request #274 from michaeltryby/dev
+30a694d,2018-09-04 14:42:24 -0400,Removing NO_GENX from win_build Makefile.bat
+0f296db,2018-09-04 21:15:57 +0300,Initialize node and link comments in add functions
+78999ea,2018-09-04 13:13:56 -0400,Getting runepanet to link on 32bit
+5f2de4a,2018-09-04 11:56:06 -0400,Merging upstream dev
+b9a1934,2018-09-04 11:53:53 -0400,Making epanet exports opt in
+bb65170,2018-09-04 10:35:55 -0400,Merge pull request #267 from LRossman/lrossman-dev
+a056bbf,2018-09-04 10:05:27 -0400,Fixing build error on Travis
+7188642,2018-09-04 09:50:08 -0400,Installing boost thread library
+b7e9988,2018-09-04 09:38:44 -0400,Adding unit test for reentrancy
+fcbb472,2018-09-04 08:26:22 +0300,Fix old function calls
+fdca2be,2018-09-03 10:34:03 -0400,Edits made to 2.2 Release Notes
+6e73b6a,2018-09-03 10:29:41 -0400,Made mempool.c threadsafe (#234)
+7957864,2018-09-03 14:10:09 +0300,Another fix for unit test
+c78aa9d,2018-09-03 13:52:37 +0300,Fix for unit test
+1b23f91,2018-09-03 13:48:18 +0300,Unit test for EN_addcontrol
+d095489,2018-09-03 12:35:39 +0300,Add EN_addcontrol function
+5d241e2,2018-09-03 08:18:42 +0300,Create headers for EN_addcontrol
+0b9dd8d,2018-09-03 07:44:37 +0300,Minor fix for VB header file
+f7d5481,2018-08-31 13:36:03 -0400,Update README.md
+c09761d,2018-08-31 13:30:53 -0400,Merge pull request #258 from michaeltryby/dev
+b2aa8de,2018-08-31 13:15:00 -0400,Fixing build error on Travis
+7326ca4,2018-08-31 13:10:34 -0400,Fixing merge conflicts
+8f54341,2018-08-31 12:59:19 -0400,Merge pull request #257 from OpenWaterAnalytics/revert-252-dev
+d331671,2018-08-31 11:14:16 -0400,Revert "Make memorypool threadsafe "
+84eb306,2018-08-31 10:54:37 -0400,Shutting of regression testing.
+b6250e2,2018-08-31 08:41:42 -0400,Reverting change to Boost_THREADAPI
+dcf556e,2018-08-31 08:24:23 -0400,Cleaning up unit test build and test header
+25db9cf,2018-08-31 06:51:39 +0300,Merge pull request #242 from Mariosmsk/pr86
+b537a27,2018-08-30 19:24:26 -0400,Merge pull request #252 from michaeltryby/dev
+5a007bc,2018-08-30 19:12:27 -0400,Adding header
+6527819,2018-08-30 15:53:01 -0400,Forgot to add test
+3433b9d,2018-08-30 15:47:44 -0400,Add boost threads lib to Travis config
+c4b6756,2018-08-30 15:39:06 -0400,Fixing compile error on Travis
+21f40f0,2018-08-30 15:30:34 -0400,Making memorypool.c reentrant and adding test
+74d68a8,2018-08-30 18:05:39 +0300,Fix typo
+7d8d780,2018-08-30 17:55:35 +0300,Merge branch 'dev' into pr86
+8991d6b,2018-08-30 17:21:02 +0300,add test for the function EN_setdemandpattern
+d41f362,2018-08-30 12:52:23 +0300,Fix crash with wrong parameters
+7d37433,2018-08-30 12:47:27 +0300,Merge pull request #250 from eladsal/dev-232
+cff7ca7,2018-08-30 12:46:56 +0300,Merge pull request #248 from OpenWaterAnalytics/dev-231
+803f869,2018-08-30 12:45:21 +0300,Revert "Fix crash with wrong parameters"
+c0b91fa,2018-08-30 12:32:00 +0300,Fix crash with wrong parameters
+dbdafd6,2018-08-29 22:31:28 +0300,Set status for new links in EN_addlink
+bcd6877,2018-08-29 22:26:32 +0300,Add legacy ENinit API
+f3d680d,2018-08-29 18:12:25 +0300,Fix test_addpattern test
+5161ad9,2018-08-29 10:17:36 -0400,Fix Appveyor badge
+edf4a09,2018-08-29 15:14:49 +0300,Fix EN_addpattern
+045742a,2018-08-28 14:26:12 -0400,Merge pull request #244 from michaeltryby/dev
+bb047c9,2018-08-28 13:58:47 -0400,Fixing build error on Visual Studio 2010
+0188b8e,2018-08-28 12:18:27 -0400,Fixing compiler warning on Travis build
+bdfe7ec,2018-08-28 11:23:30 -0400,Fixing build for python wrapper
+21ab62c,2018-08-28 08:50:41 -0400,Merge branch 'dev' of https://github.com/OpenWaterAnalytics/EPANET into dev
+476604b,2018-08-28 12:07:25 +0300,add ENsetdemandpattern function in epanet2.def
+8ca56d7,2018-08-28 00:25:31 +0300,remove space
+70f51d9,2018-08-28 00:19:56 +0300,add ENsetdemandpattern
+b6c9808,2018-08-27 16:31:31 -0400,Merge branch 'dev' of https://github.com/OpenWaterAnalytics/EPANET into issue-173
+8f69f2f,2018-08-27 16:28:27 -0400,re-index nodes in controls/rules
+da8522b,2018-08-27 23:18:29 +0300,Merge pull request #236 from Mariosmsk/issue235
+05d52c8,2018-08-27 23:04:13 +0300,add hydstatus.c in win_build file
+6316f67,2018-08-27 16:02:00 -0400,re-adds header/dat files to IDE cmake output
+8f6c56e,2018-08-27 13:46:57 -0400,Merge pull request #230 from michaeltryby/copy-dev-swig
+d5aeae8,2018-08-27 12:16:55 -0400,Updating toolkit function to use errormanager
+1602e5b,2018-08-27 09:46:55 -0400,Resolving merge conflicts
+f03e954,2018-08-27 09:40:20 -0400,Merge branch 'dev' of https://github.com/OpenWaterAnalytics/EPANET into copy-dev-swig
+bdc0505,2018-08-27 09:38:46 -0400,Resolving merge conflicts
+13011ae,2018-08-27 09:32:49 +0300,Merge pull request #229 from Mariosmsk/dev-issue228
+6ab76ef,2018-08-27 09:21:47 +0300,Merge pull request #226 from Mariosmsk/dev-epanet
+f4a57a9,2018-08-25 13:15:33 +0300,delete comment strings
+c4b7c90,2018-08-24 17:30:38 -0400,Merge pull request #210 from LRossman/contributor-lr
+9306119,2018-08-24 17:24:11 -0400,Trigging CI build
+22d0e03,2018-08-24 17:09:31 -0400,Trigging CI build
+f847a3e,2018-08-24 16:14:54 -0400,Merge branch 'contributor-lr' of https://github.com/LRossman/EPANET into contributor-lr
+66bb150,2018-08-24 16:12:47 -0400,Forgot to add new tests
+f495d2c,2018-08-24 16:09:21 -0400,Merge branch 'dev' into contributor-lr
+364e498,2018-08-24 16:03:53 -0400,Bumping rolling benchmark version
+a2fdd86,2018-08-23 23:20:16 +0300,Updating windows build script
+6d99867,2018-08-23 16:59:02 +0300,update
+0e6cc51,2018-08-23 16:47:52 +0300,Revert "remove dublicate definition"
+4025d19,2018-08-23 16:47:31 +0300,Revert "replace <text.h> to "text.h""
+842b7e6,2018-08-23 16:26:13 +0300,replace <text.h> to "text.h"
+40cd257,2018-08-23 08:00:30 -0400,Fixing bug EN_getcurvetype
+8808a01,2018-08-23 14:58:26 +0300,remove dublicate definition
+670440b,2018-08-23 07:56:11 -0400,Fixing function definition for EN_getcurve
+219e46a,2018-08-23 14:54:48 +0300,Revert "remove dublicate definition"
+1f4c3a0,2018-08-23 14:53:20 +0300,remove dublicate definition
+e8acc1b,2018-08-23 07:48:01 -0400,Fixing build
+888e447,2018-08-22 16:14:21 -0400,Adding GEN_X to cmake invocation
+0938f82,2018-08-22 15:46:24 -0400,Adding adding GEN_X macro for cmake export header
+29aa45f,2018-08-22 22:32:30 +0300,Syntax for the epanet executable
+c6fe123,2018-08-22 15:20:53 -0400,Fixing merge conflict
+75e400c,2018-08-22 15:09:33 -0400,Merging changes from upstream dev
+fafad2a,2018-08-22 15:05:48 -0400,Revert "Reorganizing epanet header"
+f66d4c6,2018-08-22 14:48:20 -0400,Revert "Reorganizing / refactoring api functions for swig wrap"
+bd4c369,2018-08-22 14:46:45 -0400,Revert "Reorganizing / refactoring api functions for swig wrap"
+114bc47,2018-08-22 19:37:27 +0300,fix addnode
+11e6ec1,2018-08-22 11:38:24 -0400,Merge branch 'dev' of https://github.com/OpenWaterAnalytics/EPANET into dev
+26ce956,2018-08-22 11:35:44 -0400,Renaming test
+761199b,2018-08-20 21:10:49 +0300,Added ENgetcurvetype API
+5ce1ca1,2018-08-20 07:45:34 -0400,Merge branch 'dev' of https://github.com/OpenWaterAnalytics/EPANET into dev
+634651d,2018-08-18 21:54:52 +0300,Add option to get pump's constant power and speed
+99e7151,2018-08-17 15:43:53 +0300,Add option to get link state
+7afbed8,2018-08-16 15:17:26 -0400,Merge branch 'dev' of https://github.com/OpenWaterAnalytics/EPANET into dev
+b59ae06,2018-08-16 11:06:05 -0400,Merge pull request #217 from michaeltryby/dev-test
+efc4421,2018-08-16 10:26:32 -0400,Implementing metadata support
+e06368e,2018-08-15 16:45:51 +0300,Adtional chnage for #208
+4e48c31,2018-08-15 07:37:19 +0300,Fix PumpType and CurveType enums
+606101a,2018-08-14 11:10:27 -0400,Adding support for chem units
+b3e26b9,2018-08-13 10:11:34 -0400,Resolved conflict in inpfile.c
+3bd2d4a,2018-08-13 10:09:44 -0400,Merge branch 'contributor-lr' of https://github.com/LRossman/EPANET into contributor-lr
+a73d923,2018-08-13 10:04:24 -0400,Fixed max. flow change node ID in Status Report
+5d6d0ca,2018-08-13 11:07:10 +0300,Merge branch 'dev' into contributor-lr
+d94e164,2018-08-13 09:19:05 +0300,Update Windows build script and VB header file
+b5e3986,2018-08-09 10:42:47 -0400,Pressure Dependent Demands added to address issue 163
+8ff88f8,2018-07-19 11:16:49 -0400,Reorganizing / refactoring api functions for swig wrap
+437a7c7,2018-07-18 18:33:51 -0400,Reorganizing / refactoring api functions for swig wrap
+528e99a,2018-07-17 07:17:33 +0300,Update win make file to include genmmd.c
+04b70c4,2018-07-16 17:55:01 -0400,Merge branch 'dev' of https://github.com/OpenWaterAnalytics/EPANET into dev
+4a0e1a0,2018-07-16 17:24:28 -0400,Merge pull request #200 from LRossman/contributor-lr
+e6e7942,2018-07-16 17:18:09 -0400,Fixing typo
+e38d7ec,2018-07-16 17:09:02 -0400,Bumping benchmark version
+711bde0,2018-07-16 17:02:35 -0400,Switching build to VS 2017 and bumping benchmark version
+10c5608,2018-07-16 14:25:53 -0400,Adding command line interface to report_diff
+4723336,2018-07-13 11:47:47 -0400,Adding errormanager to toolkit api
+db40fa7,2018-07-12 10:28:25 -0400,Improving diff report format
+86c55a2,2018-07-11 17:22:26 -0400,Fixing typo
+c482f38,2018-07-11 17:19:18 -0400,Initial commit for report_diff
+e3cd4ae,2018-07-11 10:04:10 -0400,Bumping version
+f38a637,2018-07-10 18:50:33 -0400,Adding mincdd comparison and better debug information
+51f5295,2018-07-09 11:11:39 -0400,Merge branch 'dev' of https://github.com/OpenWaterAnalytics/EPANET into dev
+c8803a9,2018-07-06 17:42:27 -0400,Reorganizing epanet header
+a93465e,2018-07-06 09:48:33 -0400,Adding test for simultaneous stepping through hyd and qual simulation
+74fbcf7,2018-07-06 09:31:58 -0400,Adding test for stepping through quality simulation
+64f72ab,2018-07-05 19:36:50 -0400,Adding test for stepping through hydraulic simulation
+efcf873,2018-07-05 18:45:13 -0400,Fixing indent
+245e2c5,2018-07-05 18:35:41 -0400,Adding tests and a fixture
+594b6b9,2018-07-03 18:47:30 -0400,Python package epanet-python builds and runs
+323e041,2018-07-03 18:16:09 -0400,Fixing typo
+ff2c851,2018-07-03 17:38:40 -0400,Merging latest from dev, trying to get import lib generated
+e29a14a,2018-07-02 13:55:54 -0400,Merge branch 'contributor-lr' of https://github.com/LRossman/EPANET into contributor-lr
+86ffbcf,2018-07-02 13:55:41 -0400,Improved node re-ordering method (Issue #162)
+e145671,2018-06-26 16:51:07 -0400,Merge pull request #195 from LRossman/contributor-lr
+39dc089,2018-06-26 16:36:23 -0400,Updating benchmark
+55a7179,2018-06-21 12:05:59 -0400,Merge branch 'contributor-lr' of https://github.com/LRossman/EPANET into contributor-lr
+f5a1b9e,2018-06-21 12:05:51 -0400,Reverted to legacy Darcy-Weisbach method
+f86df22,2018-06-21 10:20:16 +0300,Saving HeadErrorLimit and FlowChangeLimit only if they are used
+aa81bff,2018-06-19 17:09:18 -0400,Adding build and testing instructions.
+92e10a1,2018-06-19 10:41:30 -0400,Added new convergence options to epanet2.h
+3a6cd60,2018-06-19 10:34:51 -0400,Merge branch 'contributor-lr' of https://github.com/LRossman/EPANET into contributor-lr
+e9303de,2018-06-19 10:30:02 -0400,Fixes to implement issue #161
+c41e140,2018-06-19 11:16:32 +0300,Update VB header files
+42f70f5,2018-06-17 07:48:25 +0300,Remove strange string from types.h and fix win_build make file
+d5194ff,2018-06-16 11:12:59 -0400,Merge branch 'contributor-lr' of https://github.com/LRossman/EPANET into contributor-lr
+9afb6f0,2018-06-16 11:10:07 -0400,Merge branch 'contributor-lr' of https://github.com/LRossman/EPANET into contributor-lr
+b3ab8ea,2018-06-16 11:02:18 -0400,Addresses issue #161
+7e73de8,2018-06-15 11:53:20 -0400,Merge pull request #177 from LRossman/contributor-lr
+f11308f,2018-06-15 10:50:37 -0400,Switching Visual Studio 2017 build to 32 bit
+d374e7b,2018-06-15 10:41:52 -0400,Changing MAXFNAME from 260 back to 259
+9ad5c2c,2018-06-15 10:27:52 -0400,Fixing bug in appyeyor config
+ed777d9,2018-06-14 12:34:46 -0400,Merge branch 'dev' into contributor-lr
+a73b2d7,2018-06-09 12:07:44 -0400,#defined MAXFNAME as 260 instead of L_tmpnam_s
+5b75bde,2018-06-08 18:02:05 -0400,Merge pull request #192 from michaeltryby/dev
+21b7a8a,2018-06-08 17:08:37 -0400,Adding cmake variable BUILD_TESTS to Appveyor and Travis
+12d3005,2018-06-07 12:03:49 -0500,Make it more obvious where to ask questions (#191)
+9520b6d,2018-06-06 18:14:36 -0500,fixes cmake for mac, adds define option for building tests
+f0c9684,2018-06-05 10:31:18 -0400,Changes to pass reg tests
+598f080,2018-05-24 09:38:34 -0400,Merge branch 'contributor-lr' of https://github.com/LRossman/EPANET into contributor-lr
+4d1cd77,2018-05-24 09:35:49 -0400,Changed version # in binary output file
+9c586bb,2018-05-23 10:28:23 -0400,Adding quotes around call to generator var
+5af1ebf,2018-05-23 10:18:33 -0400,Simplifying env vars in appveyor matrix
+03fee3a,2018-05-23 10:06:06 -0400,Fixing another typo
+a10a388,2018-05-23 09:59:51 -0400,Fixing another typo
+bb5fe49,2018-05-23 09:56:22 -0400,Fixing typo
+6358db9,2018-05-23 09:49:25 -0400,Fixing typo
+52602ed,2018-05-23 09:42:27 -0400,Adding VS 2017 64 bit to Appveyor build matrix
+24d6b91,2018-05-22 11:12:14 -0400,Changes to get Net1.inp to run
+80a0acc,2018-04-18 08:29:22 +0300,Set default pattern for new junctions
+a46652f,2018-04-17 21:46:09 +0300,Fix bug when adding a junction
+67de368,2018-04-13 15:58:55 -0400,Merge pull request #171 from michaeltryby/dev
+cfcba15,2018-04-13 15:52:52 -0400,Migrating Travis to 2012vs10 benchmark
+0b70d87,2018-04-13 15:40:44 -0400,Migrating Appveyor to benchmark 2012vs10
+3de2384,2018-04-09 12:10:19 -0400,fixes license and attribution issues
+612dd38,2018-04-09 11:41:50 -0400,Revert "Revert "Merge branch 'dev' of https://github.com/OpenWaterAnalytics/EPANET into dev""
+4415d8c,2018-04-09 15:03:03 +0300,Revert "Merge branch 'dev' of https://github.com/OpenWaterAnalytics/EPANET into dev"
+8fca632,2018-04-09 15:02:19 +0300,Merge branch 'dev' of https://github.com/OpenWaterAnalytics/EPANET into dev
+b85aff9,2018-04-09 15:01:27 +0300,Change how demand categories linked-list is constructed (appending instead of prepending)
+d57b20e,2018-04-05 10:52:49 -0400,Cleaning up tests folder (#167)
+7bc041e,2018-04-04 17:39:39 -0400,Merge pull request #166 from michaeltryby/add-test-cases
+0eb1433,2018-04-04 16:42:22 -0400,Updating travis config with before-test.sh
+8d1e05b,2018-04-04 16:38:36 -0400,Replacing epanet-nrtestsuite with before-test.sh
+a892e8f,2018-04-04 15:02:55 -0400,Fix typo
+c99e5d1,2018-04-04 14:58:18 -0400,Adding before-test.cmd to appveyor configuration
+6308ae7,2018-04-04 14:47:01 -0400,Removing epanet-nrtestsuite and replacing the before-test.cmd
+c9d4fd5,2018-04-02 14:12:42 -0400,Fixing input file name.
+cf2857b,2018-04-02 13:32:09 -0400,Making app-config.sh executable
+c75f429,2018-04-02 13:27:22 -0400,Fixing regression testing on Appveyor
+3283797,2018-04-02 11:48:07 -0400,Merge branch 'add-test-cases' into dev
+0b5e3ea,2018-04-02 11:33:11 -0400,Adding benchmarks for new tests
+3c4c5e5,2018-03-23 15:10:03 -0400,Fixing header/footer size in epanet report test
+d599acd,2018-03-23 15:04:24 -0400,Adding new tests
+230668a,2018-03-22 17:27:53 -0400,Updating benchmark with new tests
+7c2d92f,2018-03-22 16:46:03 -0400,Adding new tests to run-nrtest scripts
+1cf8062,2018-03-22 16:34:24 -0400,Adding tests to regression test library
+780698c,2018-03-21 15:53:43 -0400,Merge pull request #156 from michaeltryby/dev-decouple
+801bc1b,2018-03-21 15:53:08 -0400,Merge branch 'dev' into dev-decouple
+bbe40c5,2018-03-21 14:10:10 -0400,Feature unittest (#157)
+7346377,2018-03-16 16:37:29 -0400,Fixing typo
+daf4b67,2018-03-16 16:34:33 -0400,Updating Appveyor to use epanet-output binary wheel
+c919290,2018-03-16 16:21:21 -0400,Updating Appveyor to use epanet-output binary wheel
+18cec6e,2018-02-16 17:02:16 -0500,Fixing typo
+65aafc0,2018-02-16 16:47:11 -0500,Updating Travis to run unit tests
+60db2a4,2018-02-16 16:42:46 -0500,Updating Travis to run unit tests
+100421f,2018-02-16 16:29:00 -0500,Adding custom comparison for strings
+b1e8694,2018-02-16 16:01:07 -0500,Fixing typo
+fe8d81d,2018-02-16 15:58:30 -0500,Fixing typo
+2f90f40,2018-02-16 15:54:24 -0500,Modifying per element comparison
+6199052,2018-02-16 15:43:50 -0500,Modifying per element comparison
+07fa9f4,2018-02-16 15:25:57 -0500,Adding flag to compile for c++11
+7c52531,2018-02-16 15:20:42 -0500,Adding flag to compile for c++11
+8875722,2018-02-16 15:13:07 -0500,Changing cmake to no longer glob output library files.
+89f17d6,2018-02-16 14:41:33 -0500,Adding libboost-test to Travis config.
+9d2d131,2018-02-16 14:35:53 -0500,Adding libboost-test to Travis config.
+508bfb1,2018-02-16 14:17:12 -0500,Adding support for unit testing using boost unit test and ctest
+ddd08e3,2018-02-02 10:52:32 -0500,Conforming to pointer declaration style.
+38292ad,2018-02-02 08:16:17 -0500,Fixed bug that was causing hard crash
+17cd1c6,2018-02-01 17:10:36 -0500,Switching EN_Project to void* for SWIG wrap. Cleaning up build.
+62d6c9f,2018-01-30 18:12:27 -0500,Converting EN_Project to void* EN_ProjectHandle to facilitate wrapping Toolkit API using SWIG.
+060db17,2018-01-26 13:16:53 -0500,Adding epanet-output lib target to CMake
+c4332e6,2018-01-26 12:39:44 -0500,Merge remote-tracking branch 'upstream/dev' into dev-swig
+859a2ab,2018-01-25 10:59:40 -0500,Moving epanet-toolkit to epanet-python repo
+63b4438,2018-01-24 16:17:25 -0500,Merge pull request #143 from OpenWaterAnalytics/dev-cmake-shared
+5e3ab54,2018-01-24 14:34:49 -0500,Merge remote-tracking branch 'refs/remotes/upstream/dev' into dev-swig
+dcd1c6d,2018-01-18 13:58:26 +0200,Fix VB header file and win build script
+831583a,2018-01-18 13:55:48 +0200,Revert "Fix VB header file and win build script"
+2b60bec,2018-01-18 13:55:22 +0200,Fix VB header file and win build script
+d940904,2018-01-17 17:01:43 -0500,Merge pull request #145 from bemcdonnell/dev
+47551d4,2018-01-17 14:21:48 -0500,Updated Readme Appveyor Badge [default dev branch]
+a0ed2cf,2018-01-17 13:12:01 -0500,Test 2 -
+a30d92b,2018-01-17 13:00:59 -0500,Testing Appveyor
+84abab3,2018-01-12 11:38:05 -0500,modifies cmake to link shared lib to the CLI
+47733fe,2018-01-12 11:35:43 -0500,Configure appveyor (#142)
+691c658,2018-01-12 09:46:32 -0500,Initial commit of toolkit SWIG wrapper work
+d2503bc,2018-01-11 15:22:26 -0500,allows changing model units on-the-fly
+3892b65,2018-01-11 14:17:09 -0500,re-adds EN_PRICEPATTERN getter
+e1acb5a,2018-01-11 14:16:20 -0500,improves file availability from cmake-generated projects
+70c38b0,2018-01-11 14:16:00 -0500,moves windows build to better-named directory
+f97d837,2018-01-09 16:56:42 -0500,Feature wrapper (#136)
+3638112,2017-06-28 12:13:56 -0400,Merge pull request #113 from OpenWaterAnalytics/add-license-1
+c90d46c,2017-06-28 12:13:44 -0400,Create LICENSE
+5eead5a,2017-06-15 16:21:39 +0300,Fix quality conversion factor error in ENsetqualtype
+a00269e,2017-05-01 13:28:59 +0300,Added comment for 3c78856
+3c78856,2017-05-01 13:25:59 +0300,Fix ENsetqualtype to set node initial values
+8ab0f06,2017-04-13 12:14:32 +0300,Added option to retrieve the pumps price pattern
+8d96873,2016-11-21 21:38:53 +0200,Added the link to the step-by-step tutorial (#76)
+09bf10d,2016-11-21 21:31:17 +0200,Merge pull request #89 from OpenWaterAnalytics/dev-rule-apis
+e1da9bc,2016-11-09 16:37:57 +0200,Fix duplicate w_POWER definition
+bca5409,2016-11-08 12:00:20 +0200,Merge pull request #87 from AngelaMarchi/ChangingRuleBased_v2
+83dd6c7,2016-11-08 18:37:54 +1030,ChangingRuleBased_v2
+ab4622b,2016-10-10 11:45:02 +0300,Updated more float types in function APIs
+9942f67,2016-09-24 12:28:20 +0300,Updated def file and float types in function APIs
+98b86cd,2016-09-23 14:00:34 +0300,Merge pull request #84 from AngelaMarchi/ChangingRuleBased
+4e349cd,2016-09-23 13:14:15 +0930,ModifyingRuleBaseControls
+6f8be1b,2016-09-23 13:07:06 +0930,ModifyingRuleBaseControls
+1d071d1,2016-09-10 02:27:16 +0930,VSP efficiency + retrieving efficiency directly (#81)
+8b4a03d,2016-08-18 15:04:42 +0300,Merge pull request #75 from Mariosmsk/dev
+7dfa611,2016-08-08 12:26:14 +0300,Added reservoirs in EN_TANKCOUNT header comment
+1f5327a,2016-07-30 09:43:28 -0400,adds the rest of the pattern functions to the module documentation (#74)
+326443d,2016-07-30 09:42:12 -0400,adds documentation for the rest of the pattern functions
+9da07f8,2016-07-28 17:15:32 -0700,Added date of V2.1 release (#72)
+0c08bf9,2016-07-25 20:26:51 -0400,updated docs for 2.1
+e34adc1,2016-07-25 20:18:06 -0400,update readme for v2.1 tag
+b750558,2016-07-25 20:14:44 -0400,Merge branch 'dev-2.1'
+e2a8e5a,2016-07-25 20:14:33 -0400,resolve conflict
+a4d27ad,2016-07-25 20:12:02 -0400,mac rpath in cmake
+ea6b361,2016-07-21 11:30:08 -0400,note about api float type
+773705e,2016-07-21 17:07:50 +0300,Consistency change in ENgetcurve function call
+754d24c,2016-07-21 17:04:29 +0300,Small fix to VB header file
+e42d59e,2016-07-21 17:01:38 +0300,Revert "Small VB header fix"
+c81d2c6,2016-07-21 17:00:33 +0300,Small VB header fix
+997c883,2016-07-20 16:29:52 -0400,Merge pull request #63 from mauriziocingi/patch-1
+98e9a31,2016-07-15 10:46:28 +0300,Merge pull request #69 from eldemet/dev-2.1-windsdk
+1d83b69,2016-07-15 09:53:26 +0300,deleted redundant bat files
+c098ca2,2016-07-15 09:48:43 +0300,Create Makefile.bat
+b26e3dc,2016-07-15 09:47:38 +0300,Exclude windows sdk compiled folders
+255d9c2,2016-07-14 15:29:06 -0400,disable showing local file location
+4e3efb1,2016-07-14 15:28:11 -0400,disable local file location
+e3dc970,2016-07-14 15:03:43 -0400,dox set
+528d972,2016-07-14 15:03:14 -0400,updates and proper tagging for dox
+7f958d7,2016-07-14 14:35:45 -0400,update doxyfile
+7fbf898,2016-07-14 14:32:02 -0400,prep dox branch
+2c60a70,2016-07-13 13:20:56 -0400,Update README.md
+2d39d1f,2016-07-13 13:19:18 -0400,Update README.md
+880f57d,2016-07-13 13:16:53 -0400,Merge branch 'dev-2.1-doxy-markup' into dev-2.1
+cdbe7e4,2016-07-13 13:14:42 -0400,adding release notes, 2.1
+31a05e3,2015-12-21 22:21:00 +0100,Update epanet.c
+1c06908,2015-12-18 13:34:04 +0200,Fix for avgqual function
+8d90000,2015-12-17 13:52:52 -0500,Merge pull request #62 from OpenWaterAnalytics/dev-2.1-debug-python-test
+ff62253,2015-12-17 13:49:23 -0500,there are two hard problems.
+8fe3bbe,2015-12-17 13:46:32 -0500,fixes diff script
+81fa797,2015-12-17 13:36:53 -0500,fixing python printing
+eb629b8,2015-12-17 13:33:33 -0500,better debug output
+71fa408,2015-12-17 13:29:47 -0500,removes fake python comparator
+d2625ed,2015-12-17 13:24:00 -0500,removes fake files
+1d8d2fb,2015-12-17 13:22:28 -0500,combining testing framework with python diff script
+cb417ce,2015-12-17 11:48:32 -0500,Merge pull request #59 from bemcdonnell/dev-2.1
+70e1eb5,2015-12-17 11:48:11 -0500,Merge pull request #58 from OpenWaterAnalytics/dev-2.1-test-network-script
+b2309e2,2015-12-16 22:09:38 -0500,Minor updates to ENOutputWrapper.py; Adding OutDiff.py
+523dee5,2015-12-15 16:40:01 -0500,adds/fixes attribution
+de21156,2015-12-15 16:39:47 -0500,adds cmake build for ENBOF
+96cf6ec,2015-12-15 20:41:54 -0500,Revert "adds/fixes attribution"
+6579a83,2015-12-15 20:39:03 -0500,fake files for test iteration
+92ea5a8,2015-12-15 20:38:53 -0500,testing scripts and travis invocation
+2f344d4,2015-12-15 16:40:01 -0500,adds/fixes attribution
+dd5d3d2,2015-12-15 16:39:47 -0500,adds cmake build for ENBOF
+32fa8fe,2015-12-12 21:23:07 +0200,Fix ENgetheadcurveindex VB header
+ab470ba,2015-12-10 22:15:22 -0500,adding brief orientation for the contribution workflow
+a86e330,2015-12-10 21:39:37 -0500,Merge pull request #52 from bemcdonnell/dev-2.1
+44ad6e8,2015-12-10 20:54:57 -0500,Adding Python wrapper for outputapi
+ec04b7f,2015-12-10 22:57:16 +0200,Initial commit of VB6 code to perform comparison of binary output files
+19f04fb,2015-12-09 21:54:48 +0200,Add WIN build for linked EXE
+4ccab6a,2015-12-07 17:18:30 -0500,simplify cmake file
+99a215b,2015-12-07 22:18:05 +0200,Change VERSION to ENGINE_VERSION
+3c006d7,2015-12-06 13:01:20 +0200,Add more checks for ENsetnodevalue tank properties
+9ff4afe,2015-12-04 16:42:12 -0500,change badge ref for tests
+7351bd9,2015-12-04 16:41:26 -0500,Merge pull request #51 from OpenWaterAnalytics/dev-2.1-travis-ci
+5297407,2015-12-04 16:38:45 -0500,Merge pull request #50 from michaeltryby/dev-2.1
+b937ff8,2015-12-04 16:24:39 -0500,update readme with travis badge
+655f502,2015-12-04 16:04:19 -0500,experiment with travis ci
+2f00a82,2015-12-04 15:46:32 -0500,Initial commit for EPANET binary output API
+4e965f1,2015-12-01 13:10:28 +0200,Merge pull request #45 from mauriziocingi/dev-2.1
+22f6cbb,2015-12-01 11:57:50 +0100,issue #44 memory leak
+6e7cf5f,2015-11-30 12:02:01 -0500,more dox, nesting pages
+395533c,2015-11-29 22:33:30 +0200,Remove hard coded version number
+23ac6e5,2015-11-28 18:59:49 -0500,clean up old comment block.
+90c2dfa,2015-11-28 18:58:49 -0500,complete function description. still needs user manual "application" examples
+92517b3,2015-11-28 17:10:26 -0500,declare curve-related functions in module
+5d2a1f8,2015-11-28 13:28:32 -0500,finish moving defines to enums for better documentation
+bcc1dcc,2015-11-28 13:22:45 -0500,Merge branch 'dev-2.1' into doxy-trial
+0745b6b,2015-11-28 13:04:22 -0500,adding main page content
+82e8d2a,2015-11-28 12:41:09 -0500,Merge remote-tracking branch 'origin/dev-2.1' into dev-2.1
+096167a,2015-11-28 00:21:36 +0200,Change ENgetheadcurve to ENgetheadcurveindex
+d191ec7,2015-11-25 19:41:38 -0500,xcode build file update to use correct input files
+8ef2f7e,2015-11-25 19:28:51 -0500,Merge pull request #39 from mauriziocingi/dev-2.1
+e28f24a,2015-11-25 19:26:47 -0500,migrating from defines to enums, and moving some documentation blocks into doxygen format
+60dc287,2015-11-25 12:03:51 +0100,adapted Linux/Makefile and created runepanet.sh.template
+1905c10,2015-11-25 12:01:51 +0100,adapted Linux/Makefile and created runepanet.sh.template
+f89515f,2015-11-24 19:49:13 +0100,added TmpOutFile=NULL; after closing TmpOutFile
+08937fc,2015-11-23 11:16:11 +0100,resolved no_args bug
+ea08fb9,2015-11-20 13:35:40 +0100,undone Warnflag declaration due to cl.exe incompatibilities , now Warnflag is retuned with errorcode
+3151805,2015-11-18 08:17:57 -0500,Merge pull request #37 from mauriziocingi/dev-2.1
+cca1cda,2015-11-04 13:55:01 +0100,added Warnflag in exported symbols
+e484486,2015-09-30 15:15:19 -0400,moving more comments into dox, enum-wrapping and documenting property keys
+1c8b592,2015-09-30 15:14:54 -0400,define module groups externally
+41c47bc,2015-09-30 15:14:40 -0400,support dox in Xcode build
+dd1f7be,2015-09-29 17:21:41 -0400,predefine DLLEXPORT to remove from docs
+ebbe8e8,2015-09-29 17:21:23 -0400,documenting some functions
+942a3f2,2015-09-29 23:23:14 +0300,Fix typo on vb.net header file
+09cc193,2015-09-28 09:44:58 -0400,grouping functions into modules and demonstrating fenced code documentation
+8be1fcf,2015-09-24 12:55:29 +0300,Fix header file
+295f6f6,2015-09-23 16:22:34 -0400,link to main header in main page
+f6d3d08,2015-09-23 16:17:27 -0400,trying doxygen markup and config
+322a3cb,2015-09-23 15:31:29 +0300,Added pump's type constants to header files
+f894ade,2015-09-20 22:44:31 +0300,Fix case when no section at top of input file
+bdcf3d7,2015-09-20 21:57:09 +0300,Fix header typo
+472d9dd,2015-09-18 14:54:43 +0300,Added curves SET functions
+02a42fe,2015-09-18 13:03:53 +0300,Added curve GET functions
+a31e424,2015-09-16 23:31:50 +0300,Update sample networks
+c4abd61,2015-09-16 16:06:31 -0400,cleans up the AUTHORS file generation script and mailmap
+c23c846,2015-09-15 22:38:13 +0300,replace strlcpy with strncpy
+b62f179,2015-09-15 11:42:07 -0400,more build file targets related to float-precision builds, and comments about the use of that define
+7dfd7f7,2015-09-15 10:46:37 -0400,fixes mac compilation, adds sample networks and debug schema
+cb8dc35,2015-09-15 10:46:18 -0400,fixes version numbering
+7336d7a,2015-09-15 10:46:06 -0400,resolve git conflict
+c9839c0,2015-09-15 10:45:51 -0400,adding authors listing tool and initial AUTHORS file
+72a9ce3,2015-09-15 10:33:50 -0400,Merge branch 'patch-2-0-13' into dev-2.1
+3c8d8d7,2015-09-15 10:33:20 -0400,free allocated char* for hash table entry key
+3f2e9ee,2015-09-15 10:30:40 -0400,Merge branch 'hash-string-copy-fix' into dev-2.1
+79d2157,2015-09-15 10:29:27 -0400,Merge branch 'coordinates-getter' into dev-2.1
+3fde235,2015-09-15 10:12:07 -0400,fixing string copy action for hash table insertion
+13f5741,2015-09-15 10:02:00 -0400,moving Xcode build files
+2c46a00,2015-09-13 12:56:28 +0300,Changed coordinates are saved to INP
+913f48f,2015-09-13 09:56:21 +0300,minor fix to VB6 & VBA include file
+c12f901,2015-09-13 09:53:21 +0300,added ENsetcoord function
+4d6bcef,2015-09-12 16:34:52 +0300,rewrite the coordinate getter
+186f21f,2015-09-12 11:54:57 +0300,update coord struct
+f9ea14e,2015-08-20 21:59:12 +0300,Fix HEAD and HEADLOSS results in report file
+6878e04,2015-08-07 12:37:05 +0300,Removed old and unused code
+d0c3f59,2015-08-05 14:15:27 +0300,Added missing parameters in the REPORT section
+4248947,2015-07-31 15:04:04 -0400,Merge pull request #20 from willfurnass/patch-2-0-13-building_on_linux
+350d32c,2015-07-31 14:44:21 -0400,Merge pull request #19 from willfurnass/add_missing_def_to_toolkit_h
+a35a61e,2015-07-31 18:50:26 +0100,Ensure that libm is linked to in cmake-driven builds
+0f65c83,2015-07-31 18:49:16 +0100,#define DLL_EXPORT as the empty string by default
+b245f4a,2015-07-31 18:22:24 +0100,Request use of C99 standard in Linux Makefiles
+9088eec,2015-07-31 18:21:04 +0100,Add (missing) EN_LINKQUAL #define to epanet2.h
+a3c7eaa,2015-07-31 14:41:18 +0300,Minor addition to vb header files
+ef2763d,2015-07-22 20:13:19 +0300,Fix to VB.Net include file
+fecac0a,2015-07-21 21:07:58 +0300, module file for VB.Net
+ce633b6,2015-07-04 15:18:55 +0300,Bug correction for Windows x64 compilation code.
+cdbd08a,2015-06-30 19:39:06 +0300,Added error code and description for wrong demand category index
+91aa538,2015-06-25 23:46:28 +0300,minor fix to VB header module
+62730e6,2015-06-16 09:42:07 +0300,Make files with relative paths
+82553cc,2015-06-15 21:01:50 +0300,Add header documentation for new functions
+fb63b87,2015-06-14 07:55:42 +0300,Moving def file into build
+336c87c,2015-06-13 00:52:38 +0300,fix for include file
+2c81796,2015-06-13 00:32:26 +0300,One click compilation for Win DLL & EXE
+40cbb5f,2015-06-13 00:16:30 +0300,Check for open file in ENgetcurve and minor fixes
+82da5db,2015-06-13 00:01:30 +0300,more c89 conformance
+79fb7ab,2015-06-12 23:51:17 +0300,update def file
+dd286af,2015-06-12 23:44:29 +0300,update include files
+2386531,2015-06-12 11:22:04 -0400,removing utility code from library source
+263e9eb,2015-06-12 10:35:57 -0400,fix compilation defs
+c9e1746,2015-06-12 10:35:12 -0400,moves example networks
+16edcea,2015-06-12 10:35:02 -0400,fix duplicate symbols
+38bb3a5,2015-06-12 10:34:50 -0400,remove old files
+bee95a6,2015-06-12 10:34:40 -0400,c89 conformance
+dfe879a,2015-06-12 10:34:25 -0400,standalone utility
+33edb5b,2015-06-12 10:34:12 -0400,cmake
+2d064c6,2015-06-12 10:34:06 -0400,build files
+87a8aaa,2015-06-12 10:06:29 -0400,better gitignore file
+2563ae6,2015-06-09 13:34:13 -0400,Merge remote-tracking branch 'origin/owa_next'
+ee65efe,2015-06-09 13:25:00 -0400,Update README.md
+e2bf89b,2015-06-08 16:53:42 -0400,linking to the category
+b52767f,2015-06-08 11:26:18 -0400,Update README.md
+338f3b8,2015-06-04 15:02:53 -0400,Update README.md
+7a534ad,2015-06-04 15:01:42 -0400,Update README.md
+265afcb,2015-05-27 16:46:57 -0400,Merge pull request #7 from OpenWaterAnalytics/elad_vb_mods
+2d60f11,2014-09-03 14:39:02 +0300,update gitignore
+4a5a58a,2014-09-03 14:33:46 +0300,support for VB6 and VBA
+e732508,2015-05-13 12:11:06 -0400,Merge pull request #5 from Mariosmsk/patch-1
+eae77fc,2015-05-13 19:08:13 +0300, Added missing ENgettimeparam EN_RULESTEP
+71b017e,2014-08-28 15:48:51 -0400,minor fix to getqualinfo for trace sim type
+0cd38fd,2014-05-05 18:07:03 -0400,New features and bug fixes
+993cfce,2014-05-05 18:00:25 -0400,Initial commit
+eae1c95,2014-04-12 21:35:43 -0400,Merge pull request #16 from samhatchett/next
+1527868,2014-04-12 21:33:28 -0400,updating gitignore for xc5
+1672e93,2014-03-14 10:18:46 -0700,Initial commit
+caa7944,2014-01-31 11:16:07 -0500,updated hash methods. just increasing the size of the hash helps a lot with loading larger networks. perhaps hash could be extended to dynamically size based on network size.
+f3052ac,2014-01-27 07:31:49 -0800,Merge pull request #14 from sdteffen/usePUMPINDEX
+3b5feb7,2014-01-27 07:31:39 -0800,Merge pull request #13 from sdteffen/pumpEN_LINKPATTERN
+f718c83,2014-01-24 18:29:09 +0100,Simpler, faster code using PUMPINDEX()
+48f9d39,2014-01-24 18:01:54 +0100,ENgetlinkvalue(EN_LINKPATTERN) allows to retrieve pump patterns.
+017e24b,2014-01-06 10:11:37 -0800,Merge pull request #12 from sdteffen/pumpEN_MINORLOSS
+d1b0212,2014-01-06 10:11:23 -0800,Merge pull request #11 from sdteffen/pumptype
+1cd06a2,2014-01-04 08:26:55 -0800,Fix ENgetlinkvalue() for EN_MINORLOSS and pumps.
+5caf7fe,2014-01-04 08:13:50 -0800,Added ENgetheadcurve(), ENgetpumptype() and related constants.
+55929ff,2013-10-08 11:06:01 -0700,Merge pull request #9 from WillFurnass/makefile_fix
+3a3d0bd,2013-10-08 17:37:51 +0100,Fixed typo in makefiles (should be -Wl, not -W1)
+9303669,2013-10-04 16:38:29 -0400,new API function -- get qual info
+6809053,2013-09-30 13:35:26 -0700,Merge pull request #8 from samhatchett/next
+2a6f5ba,2013-09-30 16:34:30 -0400,updated version number
+c3adaa7,2013-09-30 13:30:18 -0700,Merge pull request #7 from samhatchett/next
+10a5ae4,2013-09-30 16:28:12 -0400,updated some variable names to make the code a bit more self-documenting
+d1d03bf,2013-09-30 15:09:36 -0400,header file declarations illuminated for better IDE code completion
+519daf8,2013-09-27 22:19:54 -0400,adding debuggable conditionals, fixing lemontiger bug
+5b151dd,2013-08-23 12:35:08 -0400,added getter for curve id
+e16de98,2013-08-18 21:04:56 -0400,tank geometry and curve time series
+d7d0472,2013-08-25 23:57:15 -0400,ENsetbasedemand() and ENsetnodevalue() - added ENsetbasedemand to allow changes to the base demands for each demand category. Changed behavior of ENsetnodevalue when used with EN_TANKLEVEL to also set the volume in addition to the initial volume (similar to how it sets the initial head and head. Without that, we can't reset the tank head and volume from RTX.
+e7f6a8a,2013-07-23 14:56:12 -0400,fixed the getstatistic api call -- should return floattype by ref
+652b73a,2013-07-23 09:26:11 -0400,removed some old lemontiger declarations.
+9413dfe,2013-07-22 16:56:05 -0400,Merge branch 'lemontiger-rtx' into next
+99119ef,2013-07-22 16:39:09 -0400,bug fixes from master
+15d1874,2013-07-19 17:36:04 -0400,needed mods
+ba82aee,2013-07-19 13:27:26 -0400,Merge branch 'rtx-1.1-lib-mods' into lemontiger-rtx
+3e92016,2013-07-19 11:13:58 -0400,zones are now DMAs
+6674997,2013-07-16 06:13:42 -0700,Merge pull request #5 from eldemet/patch-1
+2b7f919,2013-07-16 15:14:38 +0300,Update epanet.c
+5bffc18,2013-07-15 13:47:01 -0400,llvm compilation changes (enum scoping) - added useful setMultiplierForSource method to Aggregator.
+b09492b,2013-07-09 07:04:27 -0700,Merge pull request #4 from thisIsMikeKane/patch-1
+43bb601,2013-07-08 21:22:03 -0400,Update output.c
+7e731b7,2013-06-05 11:33:17 -0400,added method ENgetaveragepatternvalue. modified ENgetbasedemand and ENgetdemandpattern to use pattern index starting with 1, consistent with other API functions.
+a55f5e3,2013-06-04 17:33:44 -0400,fixing coordinates (as in, disabling)
+067c0fd,2013-05-31 11:59:09 -0400,fixing coordinates bug, adding useful methods
+d721621,2013-05-28 09:47:25 -0400,double-typed en toolkit for compilation
+9da5f4f,2013-05-24 15:54:02 -0400,rtx mods, epanet gets coords
+4c11557,2013-05-23 19:53:26 -0400,setting float type by define
+2bc8d36,2013-05-23 19:40:56 -0400,vars and project settings -- incorporating lemon tiger changes
+434d78c,2013-05-23 19:36:03 -0400,Lemon Tiger changes
+18d9f16,2013-05-23 18:57:09 -0400,removed mac include (empty file)
+e0f2626,2013-05-14 17:37:18 -0300,Create README.md
+ac272cf,2013-05-14 12:59:21 -0700,Merge pull request #3 from yuniersoad/patch-1
+e0582a8,2013-05-14 19:38:40 +0000,Fixing conversion error in ENgetnodevalue EN_TANKDIAM
+f883a55,2013-03-11 11:54:03 -0400,Instead of changing block out status checking routine, water quality module considers pipe 'closed' status in the routine bypassing flow information just like tank volume changes.
+8e499b0,2013-03-09 09:46:31 -0500,adding a very simple network
+bd62f39,2013-03-09 09:46:12 -0500,fake data was being written to the binary file. if a link element is nominally closed, even if there's actually flow calculated there, the flow is disregarded upon writing results. so when the flow is read back in, it's zero -- which is different than it would have been if it had stayed in memory. i wonder what that does to mass balance?
+992866e,2013-02-22 10:51:05 -0500,Bug fixed - Wall reaction coefficient variable in water quality simulation is explicitly defined and added since epanet uses the roughness resistance variable as it and caused some error in step wise calculation.
+2ad5765,2013-02-05 10:58:55 -0500,pretty output
+44e44e0,2013-02-05 09:49:59 -0500,testing code for sampletown
+7a0dd5e,2013-02-04 21:28:27 -0500,removed files
+b891ccb,2013-02-04 21:26:58 -0500,project settings / prereq
+b4164f5,2013-02-04 21:17:58 -0500,more stepwise mods
+afc80b6,2013-02-04 16:29:04 -0500,trying to incorporate some of the stepwise solution functionality into the regular epanet toolkit functions.
+ab87f72,2013-02-01 18:11:39 -0500,this is the shape of the API
+4df40eb,2013-02-01 17:19:23 -0500,new branch for lemon-tiger with no new api functions
+7a5e7fe,2013-01-31 15:40:12 -0500,cool, lemontiger works on mac
+d9eebbb,2013-01-31 15:30:46 -0500,whoops, dox misspelling
+e5eeccb,2013-01-31 15:30:07 -0500,apple define, some cleanup
+4f69379,2013-01-31 15:13:40 -0500,housekeeping - JC will need to fix this
+a95576c,2013-01-25 09:47:30 -0500,project settings
+719114c,2013-01-28 15:14:10 -0500,Compile LemonTiger as a Win32 DLL. Use "LemonTiger.h" to access its functions. Added one new function - ENrunnextHQ().
+ca2bc04,2013-01-24 09:10:23 -0500,resurrecting xcodeproj, fix gitignore
+4ae2f0e,2013-01-24 00:53:12 -0500,Some housekeeping
+9f8dcad,2013-01-24 00:48:19 -0500,Solved the tank level issue. LemonTigerJ now gives right hyd/WQ results.
+c622ad6,2013-01-23 00:35:11 -0500,Added one test case and three api functions. The test will run but WQ result is not accurate.
+2e22456,2013-01-22 11:27:12 -0500,Set up the environment for building with VS 2012
+21de4d7,2013-01-21 17:53:48 -0500,base sdk changed to 'current os x'
+f8e843d,2013-01-08 12:41:48 -0500,adding rtx modifications
+ad97233,2013-01-08 12:16:45 -0500,project settings (mac)
+566eb53,2013-01-08 12:16:34 -0500,added getcurve function
+e3615b9,2013-01-08 11:34:22 -0500,removed nonessential build files
+6efc889,2013-01-08 11:33:40 -0500,removed msx mac build files
+d84d759,2013-01-07 12:32:23 -0500,gitignore
+34d271e,2012-01-16 20:46:05 +0000,Moved EPANET and EPANET_MSX from packages/sim to tpl/epanet. Also added appropriate svn:ignore settings
+e37bfd4,2011-12-08 19:57:55 +0000,Removed extra text inadvertently added
+7766a87,2011-12-06 19:00:39 +0000,Fixed so that the extern "C" was not just for linux
+3336c41,2011-12-06 18:25:02 +0000,All files in this commit: Added ifdef for Apple compilation - it does not have a malloc.h include file.
+a41cdbd,2011-12-06 18:06:01 +0000,Added a call to fflush on the hydraulic file when it is written to because it caused issues with the subsequent use of the hydraulic file related to MSX.
+eb60c48,2011-12-06 18:00:57 +0000,Added DLLEXPORT definition to Alloc routines so that MSX could see them
+242c03f,2011-12-06 17:57:57 +0000,Found and fixed an issue that occurred on 32-bit linux.  When using 5 minutes for a quality timestep, the timestep computed was 299 seconds, not 300.  I traced it to an apparent truncation issue in the hour() function in input3.c.  The time string is converted into a double value representing the timestep which is then later converted into seconds and cast to a long.  it appears that during the cast, the value is truncated to 299, not 300.
+594bda3,2011-10-04 20:44:23 +0000,final tweaks for Xcode
+8e3ddb1,2011-03-24 00:18:52 +0000,added MSX compilation under MacOSX Xcode
+85e1e67,2011-01-21 16:27:27 +0000,Added License file
+80b484d,2011-01-12 18:24:05 +0000,roll back to known version.  i messed this up unintentionally with a previous commit
+3f3b6ef,2011-01-12 18:10:58 +0000,fixing epanet repository
+0c56701,2011-01-12 18:03:53 +0000,attempting to roll back to a working version
+e0b9ee5,2010-07-28 14:40:30 +0000,changed old RTX to "KF-DAL", the Kalman Filter Demand Allocation Library
+02a8fc4,2009-09-21 23:37:27 +0000,change project root.  this is mostly a test of scm.
+56816ee,2009-09-21 23:29:00 +0000,more intermediates.
+1bce67f,2009-09-21 23:28:34 +0000,intermediate files
+8f87b8a,2009-09-21 23:00:41 +0000,woops - removing intermediate files?
+8dd067b,2009-09-21 22:46:07 +0000,adding mac build files.
+e4e5e83,2009-09-21 19:44:17 +0000,mac build files directory
+5efa305,2009-09-18 08:26:04 +0000,update vc project file for epanet dll
+95d57ce,2009-08-18 08:17:28 +0000,After much thought and deliberation... a change in EPANET repo policy regarding Makefiles and their output targets. Used to create library and executable file names that included the compiler (e.g., *_gcc_*) and the SVN rev (*_309_*).  This was to allow development along the trunk while keeping clean track of the SVN versions that objects were made from.
+c9920ba,2009-08-10 06:59:52 +0000,Changed EPANET makefiles to use -O3 optimization level.
+d95a827,2009-08-06 03:53:38 +0000,Modified epanet/base build/MSVC structure to include just sln and vcproj files for vs2008.
+1cd52c8,2009-08-05 08:50:47 +0000,Removed existing MSVC epanet solution/project files, making room for new structure
+38acdb8,2008-12-07 19:32:20 +0000,ERD --- Modified erd/src/erdinternal.c because Cygwin appears to define fpos_t as a long (it is not a structure, as with Linux)
+f658e02,2008-12-07 01:37:51 +0000,Makefile changed to build executable using all *.o instead of using DLL, because of changes in epanet.c at 2.00.12. epanet.c changed to comment out definition of DLL, allowing DLL, SOL, or CLE to be defined at compilation.
+5abc387,2008-05-07 20:04:14 +0000,A big that exists only in 2.00.12 is fixed. It is at function ENgetnodevalue for EN_SOURCEQUAL. A break statement rather than return should correspond to case.
+c38b8d0,2008-03-06 20:06:03 +0000,Commit the EPANET2.00.12 to trunk, the changes are summarized at \EPANET\BASE\trunk\doc\changes.txt.
+48d806d,2014-09-18 17:28:57 -0400,remove CRT secure def for full OWA parity
+523d34b,2014-09-18 17:27:54 -0400,parity with OWA root 2.00.12
+7823808,2014-06-27 09:14:11 -0400,Updating project description
+6d3e790,2014-05-20 17:06:53 -0400,Suppressing secure string related deprecation warnings
