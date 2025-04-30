@@ -16,7 +16,7 @@ regtester.cpp is the source code (C++17) for the tester.
 To run a regression test using these files, issue the following command in a
 console window:
 
-runregtests OWAFiles .
+runregtests OWAFile .
 
 (don't forget the period).
 
@@ -30,7 +30,7 @@ Linux Compilation Instructions:
    g++ -std=c++17 regtester.cpp -o runregtester -ldl -L. -lepanet2 -Wl,-rpath,$PWD
 
 3. Run the tests:
-   ./runregtester OWAFiles .
+   ./runregtester OWAFile .
 
 
 Note: Make sure you have the appropriate EPANET library (libepanet2.so) in the current directory.
